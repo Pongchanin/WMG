@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour {
 
-	public int attackDamage = 100;
+	public int attackDamage = 10;
 
 	GameObject player;                          
 	PlayerHealth playerHealth;                  
@@ -13,13 +13,13 @@ public class EnemyAttack : MonoBehaviour {
 
 	void Awake ()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player");
+		player = GameObject.FindGameObjectWithTag ("player");
 		playerHealth = player.GetComponent <PlayerHealth> ();
 
 	}
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.name == "My_Character") 
+		if (col.gameObject.name == "Player1") 
 		{
 			Destroy (col.gameObject);
 		}
