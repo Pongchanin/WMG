@@ -30,7 +30,7 @@ public class BallController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "plaYer2")
         {
             Destroy (other.gameObject);
         }

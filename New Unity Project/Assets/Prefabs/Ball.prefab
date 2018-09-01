@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 50388020451547494}
   - component: {fileID: 58508104426958636}
   - component: {fileID: 114742690231872924}
+  - component: {fileID: 114049364459977280}
+  - component: {fileID: 114606295772619596}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Enemy
@@ -78,6 +80,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.07
+--- !u!114 &114049364459977280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753031713153442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7bfc0fe6ad1484ea5a5b4c8781e8e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+--- !u!114 &114606295772619596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1753031713153442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9009628145f24714981bf55619b45a9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damgeToGive: 10
 --- !u!114 &114742690231872924
 MonoBehaviour:
   m_ObjectHideFlags: 1
