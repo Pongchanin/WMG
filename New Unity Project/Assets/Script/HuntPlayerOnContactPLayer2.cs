@@ -21,7 +21,7 @@ public class HuntPlayerOnContactPLayer2 : MonoBehaviour {
     {
         if (other.name == "player2")
         {
-            HealthManager.HurtPlayer(damgeToGive);
+          //  HealthManager.HurtPlayer(damgeToGive);
         }
     }
 }

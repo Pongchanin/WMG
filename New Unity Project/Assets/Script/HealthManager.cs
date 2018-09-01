@@ -5,34 +5,38 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public int maxPlayerHealth;
-    public static int playerHealth;
-    Text text;
+    GameObject player;              //Player 1 Gameobj
+    PlayerHealth playerHealth;      //Player 1 Health
 
-	void Start ()
+    GameObject player2;             //Player 2 Gameobj
+    Player2Health player2Health;    //Player 2 Gameobj
+    
+    Text player1HP_txt;
+    Text player2HP_txt;
+    private void Awake()
     {
-        text = GetComponent<Text>();
-        playerHealth = maxPlayerHealth;
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+
+        player2 = GameObject.FindGameObjectWithTag("plaYer2");
+        player2Health = player2.GetComponent<Player2Health>();
+    }
+
+    void Start ()
+    {
+        player1HP_txt = GameObject.Find("player1Health").GetComponent<Text>();
+        player2HP_txt = GameObject.Find("player2Health").GetComponent<Text>();
 	}
 	
 
 	void Update ()
     {
-        if (playerHealth <= 0)
+        if (playerHealth.currentHealth <= 0)
         {
 
         }
 
-        text.text = "" + playerHealth;
+        player1HP_txt.text = "Health: " + playerHealth.currentHealth;
+        player2HP_txt.text = "Health: " + player2Health.currentHP;
 	}
-
-    public static void HurtPlayer(int damageToGive)
-    {
-        playerHealth -= damageToGive;
-    }
-
-    public void FullHealth()
-    {
-        playerHealth = maxPlayerHealth;
-    }
 }

@@ -34,5 +34,17 @@ public class BallController : MonoBehaviour
         {
             Destroy (other.gameObject);
         }
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "wall")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "plaYer2")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

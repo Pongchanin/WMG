@@ -13,16 +13,24 @@ public class EnemyAttack : MonoBehaviour {
 
 	void Awake ()
 	{
-		player = GameObject.FindGameObjectWithTag ("player");
+		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent <PlayerHealth> ();
 
 	}
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.name == "Player1") 
+		if (col.gameObject.name == "Player1" && playerHealth.currentHealth <10) 
 		{
 			Destroy (col.gameObject);
+            print("Health: " + playerHealth.currentHealth);
 		}
+        else if(col.gameObject.name == "Player1" && playerHealth.currentHealth > 0)
+        {
+            //Do nothing
+            print("Health: " + playerHealth.currentHealth);
+            playerHealth.currentHealth -= 10;
+        }
+      
 	}
 	void OnTriggerEnter2D (Collider2D other)
 	{

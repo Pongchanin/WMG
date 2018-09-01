@@ -28,6 +28,17 @@ public class BallController2 : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(gameObject);
+            Destroy(gameObject);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "wall")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

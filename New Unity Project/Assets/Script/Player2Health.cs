@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Player2Health : MonoBehaviour {
 
-    public int maxHP = 100;
-    private int currentHP;
-    public GameObject players;
+    public const int maxHP = 100;
+    public int currentHP = maxHP;
+   // public GameObject players;
 
     void Start()
     {
-        currentHP = maxHP;
+        print(currentHP);
 
     }
     void update()
@@ -35,6 +35,6 @@ public class Player2Health : MonoBehaviour {
 
     void OnGUI()
     {
-        GUI.Box(new Rect(0, 0, 100, 25), "HEALTH" + " = " + (Mathf.Round(currentHP)));
+       // GUI.Box(new Rect(0, 0, 100, 25), "HEALTH" + " = " + (Mathf.Round(currentHP)));
     }
 }
