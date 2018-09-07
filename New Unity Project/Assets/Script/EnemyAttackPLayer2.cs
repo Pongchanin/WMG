@@ -27,6 +27,7 @@ public class EnemyAttackPLayer2 : MonoBehaviour {
         else if (col.gameObject.name == "Player2" && playerHealth.currentHP > 0)
         {
             //Do nothing
+            Destroy(col.gameObject);
             print("Health: " + playerHealth.currentHP);
             playerHealth.currentHP -= 10;
         }

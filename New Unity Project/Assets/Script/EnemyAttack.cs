@@ -7,7 +7,12 @@ public class EnemyAttack : MonoBehaviour {
 	public int attackDamage = 10;
 
 	GameObject player;                          
-	PlayerHealth playerHealth;                  
+	PlayerHealth playerHealth;
+    Transform playerSpwn;
+
+
+    GameObject player2;
+    Transform playerSpwn2;
                    
 	bool playerInRange;
 
@@ -15,8 +20,14 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent <PlayerHealth> ();
+        playerSpwn = GameObject.Find("player1_spawnpoint").transform;
 
-	}
+        player2 = GameObject.FindGameObjectWithTag("plaYer2");
+        playerSpwn2 = GameObject.Find("player2_spawnpoint").transform;
+
+
+
+    }
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.name == "Player1" && playerHealth.currentHealth <10) 
@@ -27,8 +38,12 @@ public class EnemyAttack : MonoBehaviour {
         else if(col.gameObject.name == "Player1" && playerHealth.currentHealth > 0)
         {
             //Do nothing
+            Destroy(col.gameObject);
+            Destroy(player2);
             print("Health: " + playerHealth.currentHealth);
             playerHealth.currentHealth -= 10;
+            Instantiate(player);
+            Instantiate(player2);
         }
       
 	}
