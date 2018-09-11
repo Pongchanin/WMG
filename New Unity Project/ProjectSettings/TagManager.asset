@@ -8,6 +8,7 @@ TagManager:
   - plaYer2
   - Enemy
   - wall
+  - ball
   layers:
   - Default
   - TransparentFX

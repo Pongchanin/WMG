@@ -203,6 +203,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 50251100755194464, guid: 5ddeef46386a1554483892c9d9614d25,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963956772504292, guid: 5ddeef46386a1554483892c9d9614d25,
+        type: 2}
+      propertyPath: jumpPower
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ddeef46386a1554483892c9d9614d25, type: 2}
   m_IsPrefabAsset: 0
@@ -1060,7 +1070,7 @@ GameObject:
   - component: {fileID: 582774026}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2269,6 +2279,11 @@ Prefab:
     - target: {fileID: 4251824601815566, guid: cf07a778d6124354a9153db5b76ccbf6, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 50843478503716446, guid: cf07a778d6124354a9153db5b76ccbf6,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf07a778d6124354a9153db5b76ccbf6, type: 2}

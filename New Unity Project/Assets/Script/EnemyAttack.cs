@@ -16,7 +16,28 @@ public class EnemyAttack : MonoBehaviour {
                    
 	bool playerInRange;
 
-	void Awake ()
+    float respawnTime = 3.0f;
+
+
+    float currCountdownValue;
+    public IEnumerator StartCountdown(float countdownValue = 2)
+    {
+        currCountdownValue = countdownValue;
+        while (currCountdownValue > 0)
+        {
+            Debug.Log("Countdown: " + currCountdownValue);
+            yield return new WaitForSeconds(1.0f);
+            currCountdownValue--;
+        }
+    }
+
+    void Respawn()
+    {
+        player.SetActive(true);
+        player2.SetActive(true);
+    }
+
+    void Awake ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent <PlayerHealth> ();
@@ -38,12 +59,12 @@ public class EnemyAttack : MonoBehaviour {
         else if(col.gameObject.name == "Player1" && playerHealth.currentHealth > 0)
         {
             //Do nothing
-            Destroy(col.gameObject);
-            Destroy(player2);
+            player.SetActive(false);
+            player2.SetActive(false);
             print("Health: " + playerHealth.currentHealth);
             playerHealth.currentHealth -= 10;
-            Instantiate(player);
-            Instantiate(player2);
+            
+            
         }
       
 	}
@@ -74,6 +95,7 @@ public class EnemyAttack : MonoBehaviour {
 		}
 	}
 
+   
 }
 
 

@@ -46,5 +46,9 @@ public class BallController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "ball")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
