@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\AIMovement.cs" />
+    <Compile Include="Assets\Script\BallBehavior.cs" />
     <Compile Include="Assets\Script\BallController.cs" />
     <Compile Include="Assets\Script\BallController2.cs" />
+    <Compile Include="Assets\Script\BallScore.cs" />
     <Compile Include="Assets\Script\Camera_movement.cs" />
     <Compile Include="Assets\Script\Character_move.cs" />
     <Compile Include="Assets\Script\Checkpoint.cs" />
