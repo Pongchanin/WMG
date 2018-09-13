@@ -11,7 +11,7 @@ public class Player2Health : MonoBehaviour {
 
     void Start()
     {
-        print("Player2: " + currentHP);
+        print(currentHP);
 
     }
     void update()
