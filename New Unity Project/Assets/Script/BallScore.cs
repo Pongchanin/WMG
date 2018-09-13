@@ -62,7 +62,7 @@ public class BallScore : MonoBehaviour {
             p2_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
-          
+            Application.LoadLevel("P2_win");
         }
         else if (col.gameObject.name == "Player1" && p2_score < 8)
         {
@@ -78,6 +78,7 @@ public class BallScore : MonoBehaviour {
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
+            Application.LoadLevel("P1_win");
         }
         else if (col.gameObject.name == "Player2" && p1_score < 8)
         {

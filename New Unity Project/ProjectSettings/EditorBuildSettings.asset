@@ -11,3 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LoadScenes/Game_Prototype.unity
     guid: 5fa4924cff60bc64b9c989d01c3ef5cc
+  - enabled: 1
+    path: Assets/LoadScenes/P1_win.unity
+    guid: 0a72013e300f6354985151cb8257275b
+  - enabled: 1
+    path: Assets/LoadScenes/P2_win.unity
+    guid: c1d3f7b97c6880343915e6c0347e53cc
+  m_configObjects: {}
