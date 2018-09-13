@@ -6,56 +6,83 @@ public class EnemyAttackPLayer2 : MonoBehaviour {
 
     public int attackDamage = 10;
 
-    GameObject player;          //Player 2 Gameobj
-    Player2Health playerHealth;  //Player 2 Health
+    //Player 1 Attribute
+    GameObject player;
+   // PlayerHealth playerHealth;
+    Transform playerSpwn;
+    Vector3 playerSpwnPos;
+
+
+    //Player 2 Attribute
+    GameObject player2;
+    Player2Health player2Health;
+    Transform playerSpwn2;
+    Vector3 playerSpwn2Pos;
+
+    //Big Ball Attribute
+    GameObject ball;
+    Transform ballSpwn;
+    Vector3 ballSpwnPos;
+
+
+    bool playerHit = false;
 
     bool playerInRange;
 
+    float respawnTime = 3.0f;
+
+    void resetOnHit()
+    {
+        player.SetActive(true);
+        player.transform.position = playerSpwnPos;
+        player2.SetActive(true);
+        player2.transform.position = playerSpwn2Pos;
+        ball.SetActive(true);
+        ball.transform.position = ballSpwnPos;
+
+    }
+
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("plaYer2");               //Gather Player 2 Data
-        playerHealth = player.GetComponent<Player2Health>();                 //Get HP from Player 2
+
+        //Get Player 1 Component
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerSpwn = GameObject.Find("player1_spawnpoint").transform;
+        playerSpwnPos = new Vector3(playerSpwn.position.x, playerSpwn.position.y, playerSpwn.position.z);
+
+        //Get Player 2 Component
+        player2 = GameObject.FindGameObjectWithTag("plaYer2");
+        player2Health = player2.GetComponent<Player2Health>();
+        playerSpwn2 = GameObject.Find("player2_spawnpoint").transform;
+        playerSpwn2Pos = new Vector3(playerSpwn2.position.x, playerSpwn2.position.y, playerSpwn2.position.z);
+
+        //Get Ball Component
+        ball = GameObject.FindGameObjectWithTag("ball");
+        ballSpwn = GameObject.Find("Ball_spawnpoint").transform;
+        ballSpwnPos = new Vector3(ballSpwn.position.x, ballSpwn.position.y, ballSpwn.position.z);
+
 
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player2" && playerHealth.currentHP < 10)
+        if (col.gameObject.name == "Player2" && player2Health.currentHP < 10)
         {
             Destroy(col.gameObject);
-            print("Health: " + playerHealth.currentHP);
+            print("Health: " + player2Health.currentHP);
         }
-        else if (col.gameObject.name == "Player2" && playerHealth.currentHP > 0)
-        {
-            //Do nothing
-            Destroy(col.gameObject);
-            print("Health: " + playerHealth.currentHP);
-            playerHealth.currentHP -= 10;
-        }
-    }
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject == player)
-        {
-            playerInRange = true;
-        }
-    }
-
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject == player)
-        {
-            playerInRange = false;
-        }
-    }
-    void Attack()
-    {
-
-
-        if (playerHealth.currentHP > 0)
+        else if (col.gameObject.name == "Player2" && player2Health.currentHP > 0)
         {
 
-            playerHealth.HurtPlayer(attackDamage);
+            player.SetActive(false);
+            player2.SetActive(false);
+            ball.SetActive(false);
+            print("Health: " + player2Health.currentHP);
+            player2Health.currentHP -= 10;
+
+            playerHit = true;
+            resetOnHit();
+
         }
+
     }
 }
