@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-D:/OneDrive/Thammasat/IDD 2017 - Present/2018_Semester_1/IDD299 - Game Project II/WMG/WMG/Executable/New Unity Project.exe
+C:/Users/james/Desktop/Project Gme/WMG/New Unity Project/New Unity Project.exe
 SceneListBegin?
 Assets/LoadScenes/MenuScenes.unity
 Assets/LoadScenes/Game_Prototype.unity

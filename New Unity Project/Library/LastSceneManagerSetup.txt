@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/LoadScenes/MenuScenes.unity
+- path: Assets/LoadScenes/Game_Prototype.unity
   isLoaded: 1
   isActive: 1
