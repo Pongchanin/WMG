@@ -31,12 +31,21 @@ public class Movement_C1 : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             rigid.AddForce(new Vector2(moveSpeed, 0));
+            
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            rigid.AddForce(new Vector2(0, 0));
         }
 
         else if (Input.GetKey(KeyCode.A))
         {
             rigid.AddForce(new Vector2(-moveSpeed, 0));
 
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            rigid.AddForce(new Vector2(0, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.W))

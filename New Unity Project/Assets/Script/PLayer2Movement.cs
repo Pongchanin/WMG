@@ -29,11 +29,19 @@ public class PLayer2Movement : MonoBehaviour {
         {
             rigid.AddForce(new Vector2(moveSpeed, 0));
         }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            rigid.AddForce(new Vector2(0, 0));
+        }
 
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             rigid.AddForce(new Vector2(-moveSpeed, 0));
 
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            rigid.AddForce(new Vector2(0, 0));
         }
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
