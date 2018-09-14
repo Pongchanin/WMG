@@ -196,9 +196,10 @@ GameObject:
   m_Component:
   - component: {fileID: 141038452}
   - component: {fileID: 141038453}
+  - component: {fileID: 141038454}
   m_Layer: 0
   m_Name: pftile_04_1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +263,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &141038454
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141038451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &227727975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,9 +1574,10 @@ GameObject:
   m_Component:
   - component: {fileID: 797158092}
   - component: {fileID: 797158093}
+  - component: {fileID: 797158094}
   m_Layer: 0
   m_Name: pftile_04_1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1567,6 +1641,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &797158094
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797158091}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &809890732
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2419,7 @@ GameObject:
   - component: {fileID: 1231319256}
   m_Layer: 0
   m_Name: pftile_03_3 (2)
-  m_TagString: floor
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2522,9 +2668,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1308873509}
   - component: {fileID: 1308873510}
+  - component: {fileID: 1308873511}
   m_Layer: 0
   m_Name: pftile_04_1
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,6 +2735,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1308873511
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1308873508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &1395435793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2893,9 +3112,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1487040945}
   - component: {fileID: 1487040946}
+  - component: {fileID: 1487040947}
   m_Layer: 0
   m_Name: pftile_04_1 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2959,6 +3179,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1487040947
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487040944}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &1539478267
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,9 +3378,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1708325197}
   - component: {fileID: 1708325198}
+  - component: {fileID: 1708325199}
   m_Layer: 0
   m_Name: pftile_04_1 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3152,6 +3445,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1708325199
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708325196}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &1709343172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3661,9 +4026,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1997395281}
   - component: {fileID: 1997395282}
+  - component: {fileID: 1997395283}
   m_Layer: 0
   m_Name: pftile_04_1 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3727,6 +4093,78 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &1997395283
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997395280}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 6}
+    newSize: {x: 3, y: 6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.14, y: 3}
+      - {x: 1.06, y: 2.99}
+      - {x: 0.94, y: 2.97}
+      - {x: 0.66999996, y: 2.9099998}
+      - {x: 0.55, y: 2.87}
+      - {x: 0.29, y: 2.77}
+      - {x: 0.02, y: 2.6399999}
+      - {x: -0.13, y: 2.55}
+      - {x: -0.29, y: 2.44}
+      - {x: -0.42, y: 2.33}
+      - {x: -0.48999998, y: 2.27}
+      - {x: -0.77, y: 1.99}
+      - {x: -0.83, y: 1.92}
+      - {x: -0.94, y: 1.79}
+      - {x: -1.05, y: 1.62}
+      - {x: -1.14, y: 1.48}
+      - {x: -1.27, y: 1.2099999}
+      - {x: -1.3299999, y: 1.06}
+      - {x: -1.41, y: 0.82}
+      - {x: -1.4399999, y: 0.74}
+      - {x: -1.49, y: 0.44}
+      - {x: -1.5, y: 0.35999998}
+      - {x: -1.5, y: -0.35}
+      - {x: -1.49, y: -0.44}
+      - {x: -1.4699999, y: -0.56}
+      - {x: -1.43, y: -0.74}
+      - {x: -1.4, y: -0.84999996}
+      - {x: -1.37, y: -0.95}
+      - {x: -1.27, y: -1.2099999}
+      - {x: -1.14, y: -1.48}
+      - {x: -1.0799999, y: -1.5799999}
+      - {x: -0.98999995, y: -1.7199999}
+      - {x: -0.83, y: -1.92}
+      - {x: -0.77, y: -1.99}
+      - {x: -0.48999998, y: -2.27}
+      - {x: -0.32999998, y: -2.4099998}
+      - {x: -0.22, y: -2.49}
+      - {x: -0.12, y: -2.55}
+      - {x: -0.08, y: -2.58}
+      - {x: 0.02, y: -2.6399999}
+      - {x: 0.29, y: -2.77}
+      - {x: 0.44, y: -2.83}
+      - {x: 0.68, y: -2.9099998}
+      - {x: 0.76, y: -2.9399998}
+      - {x: 1.06, y: -2.99}
+      - {x: 1.13, y: -3}
+      - {x: 1.5, y: -3}
+      - {x: 1.5, y: 3}
 --- !u!1 &2070940868
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,7 +4300,7 @@ GameObject:
   - component: {fileID: 2095101814}
   m_Layer: 0
   m_Name: pftile_03_3
-  m_TagString: floor
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
