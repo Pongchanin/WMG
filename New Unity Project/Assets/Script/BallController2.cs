@@ -48,6 +48,10 @@ public class BallController2 : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "plaYer2")
+        {
+            Destroy(this.gameObject);
+        }
         else if(collision.collider.tag == "ball")
         {
             Destroy(this.gameObject);

@@ -31,7 +31,7 @@ public class PLayer2Movement : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow))
         {
             rigid.AddForce(new Vector2(moveSpeed, 0));
-            characterTransform.localScale = new Vector3(-0.9f, 0.8f, 1);
+          //  characterTransform.localScale = new Vector3(-0.9f, 0.8f, 1);
         }
         else if (Input.GetKeyUp(KeyCode.RightArrow))
         {
@@ -41,7 +41,7 @@ public class PLayer2Movement : MonoBehaviour {
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             rigid.AddForce(new Vector2(-moveSpeed, 0));
-            characterTransform.localScale = new Vector3(0.9f, 0.8f, 1);
+          //  characterTransform.localScale = new Vector3(0.9f, 0.8f, 1);
 
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))

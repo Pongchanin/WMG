@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/james/Desktop/Project Gme/WMG/Executable/New Unity Project.exe
+D:/OneDrive/Thammasat/IDD 2017 - Present/2018_Semester_1/IDD299 - Game Project II/WMG/WMG/New Unity Project/GameTest_Data/New Unity Project.exe
 SceneListBegin?
 Assets/LoadScenes/MenuScenes.unity
 Assets/LoadScenes/Game_Prototype.unity
@@ -177,7 +177,7 @@ e033f131358cea5a0eabf9561e781deb UnityEngine.TestRunner.dll:UnityEngine.TestTool
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Endingsceen
-e16fc779f20498ab29137a2a4dac9462 Assembly-CSharp.dll:.BallController2
+1774685aead46d14748a93a44a74ec05 Assembly-CSharp.dll:.BallController2
 1a90b221dc803408fbafa883c12bcab4 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioListenerExtension
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
