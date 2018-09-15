@@ -14,10 +14,13 @@ public class PLayer2Movement : MonoBehaviour {
     public Transform firePoint;
     public GameObject Ball;
 
+    Transform characterTransform;
+
 
     void Start()
     {
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
+        characterTransform = gameObject.GetComponent<Transform>();
     }
 
 
@@ -28,6 +31,7 @@ public class PLayer2Movement : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow))
         {
             rigid.AddForce(new Vector2(moveSpeed, 0));
+            characterTransform.localScale = new Vector3(-0.9f, 0.8f, 1);
         }
         else if (Input.GetKeyUp(KeyCode.RightArrow))
         {
@@ -37,6 +41,7 @@ public class PLayer2Movement : MonoBehaviour {
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             rigid.AddForce(new Vector2(-moveSpeed, 0));
+            characterTransform.localScale = new Vector3(0.9f, 0.8f, 1);
 
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
@@ -48,6 +53,7 @@ public class PLayer2Movement : MonoBehaviour {
         {
             if (jumpTime < 2)
             {
+                characterTransform.position += new Vector3(0, 0.1f, 0);
                 rigid.AddForce(new Vector2(0, jumpPower));
                 jumpPower += 0;
                 jumpTime += 1;

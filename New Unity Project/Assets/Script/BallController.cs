@@ -19,6 +19,11 @@ public class BallController : MonoBehaviour
             speed = -speed;
             ratationSpeed = -ratationSpeed;
         }
+        else if (player.transform.localScale.x > 0)
+        {
+            speed = speed;
+            ratationSpeed = ratationSpeed;
+        }
     }
 
 

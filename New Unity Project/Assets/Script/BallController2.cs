@@ -6,6 +6,8 @@ public class BallController2 : MonoBehaviour {
 
     Rigidbody2D rigid2D;
     public float speed;
+    public Movement_C1 player;
+    public float ratationSpeed;
 
     public PLayer2Movement plaYer2;
 
@@ -17,6 +19,12 @@ public class BallController2 : MonoBehaviour {
         if (plaYer2.transform.localScale.x < 0)
         {
             speed = -speed;
+            ratationSpeed = -ratationSpeed;
+        }
+        else if (player.transform.localScale.x > 0)
+        {
+            speed = -speed;
+            ratationSpeed = -ratationSpeed;
         }
     }
 

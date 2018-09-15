@@ -17,10 +17,13 @@ public class Movement_C1 : MonoBehaviour {
     public float shotDelay;
     private float shotDealyCounter;
 
+    Transform characterTransform;
+
 
     void Start()
     {
         rigid2D = gameObject.GetComponent< Rigidbody2D >();
+        characterTransform = gameObject.GetComponent<Transform>();
     }
 
 
@@ -31,7 +34,8 @@ public class Movement_C1 : MonoBehaviour {
         if (Input.GetKey(KeyCode.D))
         {
             rigid.AddForce(new Vector2(moveSpeed, 0));
-            
+            characterTransform.localScale = new Vector3(-0.8f, 0.8f, 1);
+
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
@@ -41,6 +45,7 @@ public class Movement_C1 : MonoBehaviour {
         else if (Input.GetKey(KeyCode.A))
         {
             rigid.AddForce(new Vector2(-moveSpeed, 0));
+            characterTransform.localScale = new Vector3(0.8f, 0.8f, 1);
 
         }
         else if (Input.GetKeyUp(KeyCode.A))
@@ -50,6 +55,7 @@ public class Movement_C1 : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.W))
         {
+            characterTransform.position += new Vector3(0, 0.1f, 0);
             if (jumpTime < 2)
             {
                 rigid.AddForce(new Vector2(0, jumpPower));
