@@ -67,11 +67,6 @@ public class Movement_C1 : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             shotDealyCounter -= Time.deltaTime;
-
-            if (shotDealyCounter <= 0)
-            {
-                shotDealyCounter = shotDelay;
-            }
         }
     }
 

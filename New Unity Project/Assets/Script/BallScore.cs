@@ -57,14 +57,14 @@ public class BallScore : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player1" && p2_score == 8)
+        if (col.gameObject.name == "Player1" && p2_score == 4)
         {
             p2_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel("P2_win");
         }
-        else if (col.gameObject.name == "Player1" && p2_score < 8)
+        else if (col.gameObject.name == "Player1" && p2_score < 4)
         {
 
             player.SetActive(false);
@@ -73,14 +73,14 @@ public class BallScore : MonoBehaviour {
             resetOnHit();
             p2_score++;
         }
-        if (col.gameObject.name == "Player2" && p1_score == 8)
+        if (col.gameObject.name == "Player2" && p1_score == 4)
         {
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel("P1_win");
         }
-        else if (col.gameObject.name == "Player2" && p1_score < 8)
+        else if (col.gameObject.name == "Player2" && p1_score < 4)
         {
 
             player.SetActive(false);
