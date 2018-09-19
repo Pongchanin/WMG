@@ -10,27 +10,36 @@ public class BallController : MonoBehaviour
     public float ratationSpeed;
 
 
+
+    void setBallDirection()
+    {
+        if (player.PlayerFacingRight == true)
+        {
+            rigid2D.velocity = new Vector2(speed, 0);
+            rigid2D.angularVelocity = ratationSpeed;
+        }
+        else
+        {
+            rigid2D.velocity = new Vector2(-speed, 0);
+            rigid2D.angularVelocity = ratationSpeed;
+        }
+    }
+
     void Start()
     {
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
         player = gameObject.GetComponent<Movement_C1>();
-        if (player.transform.localScale.x < 0)
-        {
-            speed = -speed;
-            ratationSpeed = -ratationSpeed;
-        }
-        else if (player.transform.localScale.x > 0)
-        {
-            speed = speed;
-            ratationSpeed = ratationSpeed;
-        }
+       
     }
 
 
     void Update()
     {
+        
         rigid2D.velocity = new Vector2(speed, 0);
         rigid2D.angularVelocity = ratationSpeed;
+        setBallDirection();
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
