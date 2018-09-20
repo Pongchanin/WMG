@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 35
-  player: {fileID: 0}
-  ratationSpeed: 360
+  player: {fileID: 114229192561281698, guid: cf07a778d6124354a9153db5b76ccbf6, type: 2}
+  ratationSpeed: 0
 --- !u!212 &212142952514130112
 SpriteRenderer:
   m_ObjectHideFlags: 1

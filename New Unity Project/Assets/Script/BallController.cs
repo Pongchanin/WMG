@@ -28,7 +28,8 @@ public class BallController : MonoBehaviour
     void Start()
     {
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
-        player = gameObject.GetComponent<Movement_C1>();
+        GameObject Player = GameObject.Find("Player1");
+        player = Player.GetComponent<Movement_C1>();
        
     }
 
@@ -36,8 +37,8 @@ public class BallController : MonoBehaviour
     void Update()
     {
         
-        rigid2D.velocity = new Vector2(speed, 0);
-        rigid2D.angularVelocity = ratationSpeed;
+       // rigid2D.velocity = new Vector2(speed, 0);
+       // rigid2D.angularVelocity = ratationSpeed;
         setBallDirection();
 
     }

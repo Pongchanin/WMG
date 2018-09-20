@@ -15,12 +15,12 @@ public class BallController2 : MonoBehaviour {
     {
         if (plaYer2.playerFacingLeft == true)
         {
-            rigid2D.velocity = new Vector2(speed, 0);
+            rigid2D.velocity = new Vector2(-speed, 0);
             rigid2D.angularVelocity = ratationSpeed;
         }
         else
         {
-            rigid2D.velocity = new Vector2(-speed, 0);
+            rigid2D.velocity = new Vector2(speed, 0);
             rigid2D.angularVelocity = ratationSpeed;
         }
     }
@@ -28,13 +28,14 @@ public class BallController2 : MonoBehaviour {
     void Start()
     {
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
-        plaYer2 = gameObject.GetComponent<PLayer2Movement>();
+        GameObject Player2 = GameObject.Find("Player2");
+        plaYer2 = Player2.GetComponent<PLayer2Movement>();
     }
 
 
     void Update()
     {
-        rigid2D.velocity = new Vector2(-speed, 0);
+        setBallDirection();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
