@@ -227,8 +227,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\AIMovement.cs" />
+    <Compile Include="Assets\Script\BallBehavior.cs" />
     <Compile Include="Assets\Script\BallController.cs" />
     <Compile Include="Assets\Script\BallController2.cs" />
+    <Compile Include="Assets\Script\BallScore.cs" />
     <Compile Include="Assets\Script\Camera_movement.cs" />
     <Compile Include="Assets\Script\Character_move.cs" />
     <Compile Include="Assets\Script\Checkpoint.cs" />
@@ -260,6 +262,17 @@
     <Compile Include="Assets\Script\Sound_Manger.cs" />
     <Compile Include="Assets\Script\SpawnMonster.cs" />
     <Compile Include="Assets\Script\WinScene.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\GamePrototype\Prototype Platform\kenney_particlePack\License.txt" />
+    <None Include="Assets\GamePrototype\Prototype Platform\kenney_simplifiedplatformer\License.txt" />
+    <None Include="Assets\GamePrototype\Prototype Platform\kenney_spaceshooterextension\License.txt" />
+    <None Include="Assets\GamePrototype\Prototype Platform\kenney_spaceshooterextension\Spritesheet\spaceShooter2_spritesheet.xml" />
+    <None Include="Assets\GamePrototype\Prototype Platform\kenney_spaceshooterextension\Spritesheet\spaceShooter2_spritesheet_2X.xml" />
+    <None Include="Assets\GamePrototype\Prototype Platform\mappack\License.txt" />
+    <None Include="Assets\GamePrototype\Prototype Platform\mappack\Spritesheet\mapPack_spritesheet.xml" />
+    <None Include="Assets\Gmae Menu Picture\Read_fromFon_20180911_fonts.txt" />
+    <None Include="Assets\Gmae Menu Picture\Read_menuscreen_fromFon.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
