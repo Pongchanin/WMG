@@ -8,6 +8,8 @@ TagManager:
   - Player2
   - Wall
   - ball
+  - bullet
+  - bullet2
   layers:
   - Default
   - TransparentFX

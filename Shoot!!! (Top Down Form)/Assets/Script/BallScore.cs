@@ -28,8 +28,10 @@ public class BallScore : MonoBehaviour
 
     //Big Ball Attribute
     GameObject ball;
+    Rigidbody2D ballRigid2D;
     Transform ballSpwn;
     Vector3 ballSpwnPos;
+    public int ballSpeed;
 
     void resetOnHit()
     {
@@ -68,6 +70,9 @@ public class BallScore : MonoBehaviour
         ball = GameObject.FindGameObjectWithTag("ball");
         ballSpwn = GameObject.Find("Ball_spawnpoint").transform;
         ballSpwnPos = new Vector3(ballSpwn.position.x, ballSpwn.position.y, ballSpwn.position.z);
+
+        //Big Ball Component
+        ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -130,6 +135,14 @@ public class BallScore : MonoBehaviour
             {
                 p1_score_3.SetActive(true);
             }
+        }
+        if (col.gameObject.CompareTag("bullet"))
+        {
+            ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+        }
+        if (col.gameObject.CompareTag("bullet2"))
+        {
+            ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
         }
 
     }
