@@ -12,9 +12,6 @@ public class BallScore : MonoBehaviour
     Vector3 playerSpwnPos;
     Text player1_score;
     int p1_score = 0;
-    GameObject p1_score_1;
-    GameObject p1_score_2;
-    GameObject p1_score_3;
 
     //Player 2 Attribute
     GameObject player2;
@@ -22,9 +19,6 @@ public class BallScore : MonoBehaviour
     Vector3 playerSpwn2Pos;
     Text player2_score;
     int p2_score = 0;
-    GameObject p2_score_1;
-    GameObject p2_score_2;
-    GameObject p2_score_3;
 
     //Big Ball Attribute
     GameObject ball;
@@ -41,7 +35,6 @@ public class BallScore : MonoBehaviour
         player2.transform.position = playerSpwn2Pos;
         ball.SetActive(true);
         ball.transform.position = ballSpwnPos;
-       
 
     }
 
@@ -52,19 +45,12 @@ public class BallScore : MonoBehaviour
         player1_score = GameObject.Find("player1_score").GetComponent<Text>();
         playerSpawn1 = GameObject.Find("player1_spawnpoint").transform;
         playerSpwnPos = new Vector3(playerSpawn1.position.x, playerSpawn1.position.y, playerSpawn1.position.z);
-        p1_score_1 = GameObject.Find("p1_score01_get");
-        p1_score_2 = GameObject.Find("p1_score02_get");
-        p1_score_3 = GameObject.Find("p1_score03_get");
-
 
         //Get Player 2 Component
         player2 = GameObject.FindGameObjectWithTag("Player2");
         player2_score = GameObject.Find("player2_score").GetComponent<Text>();
         playerSpwn2 = GameObject.Find("player2_spawnpoint").transform;
         playerSpwn2Pos = new Vector3(playerSpwn2.position.x, playerSpwn2.position.y, playerSpwn2.position.z);
-        p2_score_1 = GameObject.Find("p2_score01_get");
-        p2_score_2 = GameObject.Find("p2_score02_get");
-        p2_score_3 = GameObject.Find("p2_score03_get");
 
         //Get Ball Component
         ball = GameObject.FindGameObjectWithTag("ball");
@@ -77,14 +63,14 @@ public class BallScore : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player1" && p2_score == 2)
+        if (col.gameObject.name == "Player1" && p2_score == 4)
         {
             p2_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(3);
         }
-        else if (col.gameObject.name == "Player1" && p2_score < 2)
+        else if (col.gameObject.name == "Player1" && p2_score < 4)
         {
 
             player1.SetActive(false);
@@ -92,29 +78,15 @@ public class BallScore : MonoBehaviour
             ball.SetActive(false);
             resetOnHit();
             p2_score++;
-            if(p2_score == 1)
-            {
-                p2_score_1.SetActive(true);
-            }
-            else if(p2_score == 2)
-            {
-                p2_score_1.SetActive(true);
-                p2_score_2.SetActive(true);
-            }
-            else if (p2_score == 3)
-            {
-               
-                p2_score_3.SetActive(true);
-            }
         }
-        if (col.gameObject.name == "Player2" && p1_score == 2)
+        if (col.gameObject.name == "Player2" && p1_score == 4)
         {
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(2);
         }
-        else if (col.gameObject.name == "Player2" && p1_score < 2)
+        else if (col.gameObject.name == "Player2" && p1_score < 4)
         {
 
             player1.SetActive(false);
@@ -122,19 +94,6 @@ public class BallScore : MonoBehaviour
             ball.SetActive(false);
             resetOnHit();
             p1_score++;
-            if (p1_score == 1)
-            {
-                p1_score_1.SetActive(true);
-            }
-            else if (p1_score == 2)
-            {
-                p1_score_1.SetActive(true);
-                p1_score_2.SetActive(true);
-            }
-            else if (p1_score == 3)
-            {
-                p1_score_3.SetActive(true);
-            }
         }
         if (col.gameObject.CompareTag("bullet"))
         {
@@ -150,12 +109,7 @@ public class BallScore : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        p2_score_1.SetActive(false);
-        p2_score_2.SetActive(false);
-        p2_score_3.SetActive(false);
-        p1_score_1.SetActive(false);
-        p1_score_2.SetActive(false);
-        p1_score_3.SetActive(false);
+
     }
 
     // Update is called once per frame

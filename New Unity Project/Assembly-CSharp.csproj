@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\AIMovement.cs" />
     <Compile Include="Assets\Script\BallBehavior.cs" />
     <Compile Include="Assets\Script\BallController.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Script\LoadingScene.cs" />
     <Compile Include="Assets\Script\LoadOnClick.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
+    <Compile Include="Assets\Script\Meun.cs" />
     <Compile Include="Assets\Script\Movement_C1.cs" />
     <Compile Include="Assets\Script\Mycharacter.cs" />
     <Compile Include="Assets\Script\PauseMenu.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Script\PLayer2Movement.cs" />
     <Compile Include="Assets\Script\PlayerHealth.cs" />
     <Compile Include="Assets\Script\SelectMeun.cs" />
+    <Compile Include="Assets\Script\Shooting.cs" />
     <Compile Include="Assets\Script\Sound_Manger.cs" />
     <Compile Include="Assets\Script\SpawnMonster.cs" />
     <Compile Include="Assets\Script\WinScene.cs" />
