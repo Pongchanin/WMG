@@ -25,7 +25,8 @@ public class BallScore : MonoBehaviour
     Rigidbody2D ballRigid2D;
     Transform ballSpwn;
     Vector3 ballSpwnPos;
-    public int ballSpeed;
+    int ballSpeed;
+    public int ballSpeedInit;
 
     void resetOnHit()
     {
@@ -35,7 +36,13 @@ public class BallScore : MonoBehaviour
         player2.transform.position = playerSpwn2Pos;
         ball.SetActive(true);
         ball.transform.position = ballSpwnPos;
+        ballSpeed = ballSpeedInit;
+        
 
+    }
+    void increaseBallSpeed()
+    {
+        ballSpeed += 1;
     }
 
     private void Awake()
@@ -98,10 +105,12 @@ public class BallScore : MonoBehaviour
         if (col.gameObject.CompareTag("bullet"))
         {
             ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+            increaseBallSpeed();
         }
         if (col.gameObject.CompareTag("bullet2"))
         {
             ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
+            increaseBallSpeed();
         }
 
     }
@@ -119,3 +128,4 @@ public class BallScore : MonoBehaviour
         player2_score.text = "Score: " + p2_score;
     }
 }
+    
