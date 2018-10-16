@@ -5,10 +5,16 @@ using UnityEngine;
 public class Player1Controller : MonoBehaviour
 {
 
+    public bool isShield;
     public float moveSpeed;
     public Transform firePoint;
     public GameObject Ball;
     public bool PlayerFacingRight;
+    public GameObject Shield;
+    public Transform playerPoint;
+
+
+    float timeRemaining = 3f;
 
     void Start()
     {
@@ -27,6 +33,10 @@ public class Player1Controller : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Instantiate(Shield, playerPoint.position, playerPoint.rotation);
         }
     }
 
