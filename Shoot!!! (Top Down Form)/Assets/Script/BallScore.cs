@@ -10,7 +10,7 @@ public class BallScore : MonoBehaviour
     //Player 1 Attribute
     GameObject player1;
     Transform playerSpawn1;
-    Vector3 playerSpwnPos;
+    Vector3 playerSpwn1Pos;
     Text player1_score;
     int p1_score = 0;
 
@@ -32,7 +32,7 @@ public class BallScore : MonoBehaviour
     void resetOnHit()
     {
         player1.SetActive(true);
-        player1.transform.position = playerSpwnPos;
+        player1.transform.position = playerSpwn1Pos;
         player2.SetActive(true);
         player2.transform.position = playerSpwn2Pos;
         ball.SetActive(true);
@@ -48,13 +48,13 @@ public class BallScore : MonoBehaviour
 
     private void Awake()
     {
-        //Get Player 1 Component
+        //Get Player 3 Component
         player1 = GameObject.FindGameObjectWithTag("Player1");
         player1_score = GameObject.Find("player1_score").GetComponent<Text>();
         playerSpawn1 = GameObject.Find("player1_spawnpoint").transform;
-        playerSpwnPos = new Vector3(playerSpawn1.position.x, playerSpawn1.position.y, playerSpawn1.position.z);
+        playerSpwn1Pos = new Vector3(playerSpawn1.position.x, playerSpawn1.position.y, playerSpawn1.position.z);
 
-        //Get Player 2 Component
+        //Get Player 4 Component
         player2 = GameObject.FindGameObjectWithTag("Player2");
         player2_score = GameObject.Find("player2_score").GetComponent<Text>();
         playerSpwn2 = GameObject.Find("player2_spawnpoint").transform;
@@ -85,14 +85,14 @@ public class BallScore : MonoBehaviour
             player2.SetActive(false);
             ball.SetActive(false);
             resetOnHit();
-            p2_score++;
+            p1_score++;
         }
         if (col.gameObject.name == "Player2" && p1_score == 4)
         {
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
-            Application.LoadLevel(2);
+            Application.LoadLevel(4);
         }
         else if (col.gameObject.name == "Player2" && p1_score < 4)
         {

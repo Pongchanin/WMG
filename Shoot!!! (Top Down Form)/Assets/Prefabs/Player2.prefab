@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4629261315190626}
   - component: {fileID: 212345958079999530}
-  - component: {fileID: 60750173720903166}
-  - component: {fileID: 114097774672770718}
+  - component: {fileID: 60189051882876472}
+  - component: {fileID: 114508799329189840}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1073150624250224}
   m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -0.00432018, z: 0.019413497}
+  m_LocalPosition: {x: 0.46, y: 0.99, z: 0.019413497}
   m_LocalScale: {x: -0.34274858, y: -0.34274858, z: 0.3427486}
   m_Children: []
   m_Father: {fileID: 4629261315190626}
@@ -63,15 +63,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1012077561435462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.46, y: 0.05, z: 0}
-  m_LocalScale: {x: -2.9175906, y: -2.9175906, z: 2.9175904}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 6.46, y: 0.37, z: 0}
+  m_LocalScale: {x: -0.7561649, y: -0.7561649, z: 0.7561648}
   m_Children:
   - {fileID: 4045490674755144}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60750173720903166
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!60 &60189051882876472
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.44}
+    oldSize: {x: 1.55, y: 1.69}
     newSize: {x: 0.5, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -95,15 +95,47 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.14999999, y: 0.22}
-      - {x: -0.25, y: 0.17999999}
-      - {x: -0.25, y: -0.12}
-      - {x: -0.17999999, y: -0.22}
-      - {x: 0.13, y: -0.22}
-      - {x: 0.25, y: -0.16}
-      - {x: 0.25, y: 0}
-      - {x: 0.049999997, y: 0.22}
---- !u!114 &114097774672770718
+    - - {x: 0.72499996, y: -0.465}
+      - {x: 0.775, y: -0.42499998}
+      - {x: 0.775, y: -0.175}
+      - {x: 0.73499995, y: -0.065}
+      - {x: 0.775, y: 0.085}
+      - {x: 0.755, y: 0.24499999}
+      - {x: 0.625, y: 0.39499998}
+      - {x: 0.655, y: 0.515}
+      - {x: 0.715, y: 0.715}
+      - {x: 0.715, y: 0.815}
+      - {x: 0.675, y: 0.84499997}
+      - {x: 0.575, y: 0.84499997}
+      - {x: 0.53499997, y: 0.775}
+      - {x: 0.445, y: 0.405}
+      - {x: 0.39499998, y: 0.435}
+      - {x: 0.155, y: 0.555}
+      - {x: -0.005, y: 0.585}
+      - {x: -0.074999996, y: 0.575}
+      - {x: -0.095, y: 0.66499996}
+      - {x: -0.114999995, y: 0.78499997}
+      - {x: -0.155, y: 0.805}
+      - {x: -0.205, y: 0.815}
+      - {x: -0.265, y: 0.815}
+      - {x: -0.375, y: 0.715}
+      - {x: -0.445, y: 0.515}
+      - {x: -0.575, y: 0.295}
+      - {x: -0.695, y: 0.105}
+      - {x: -0.775, y: -0.035}
+      - {x: -0.775, y: -0.305}
+      - {x: -0.715, y: -0.385}
+      - {x: -0.60499996, y: -0.435}
+      - {x: -0.585, y: -0.515}
+      - {x: -0.355, y: -0.685}
+      - {x: -0.225, y: -0.765}
+      - {x: -0.055, y: -0.825}
+      - {x: 0.005, y: -0.84499997}
+      - {x: 0.545, y: -0.84499997}
+      - {x: 0.575, y: -0.835}
+      - {x: 0.675, y: -0.765}
+      - {x: 0.73499995, y: -0.675}
+--- !u!114 &114508799329189840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +146,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d796e178c1519f94db65c1da728fb0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  boostTime: 8
+  currentBoostTime: 8
+  boostDelayTime: 8
+  currentBoostDelayTime: 8
+  boosting: 1
+  time: 0
+  baseSpeed: 10
+  speedBoost: 20
+  speed: 10
   firePoint: {fileID: 4045490674755144}
   Ball: {fileID: 1538950514313224, guid: dc34cd5e48e46c84aa33dd3dfa2c55c4, type: 2}
   PlayerFacingRight: 1
@@ -153,7 +193,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6c1429a0ab27bf547b136ee1b5f0eb77, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 328be29f75585094a8d563dbdbb0a201, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

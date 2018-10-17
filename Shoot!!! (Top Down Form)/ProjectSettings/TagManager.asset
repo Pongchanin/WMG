@@ -11,6 +11,12 @@ TagManager:
   - bullet
   - bullet2
   - Shield
+  - Player3
+  - bullet3
+  - Player4
+  - bullet4
+  - Turret
+  - TurretBall
   layers:
   - Default
   - TransparentFX

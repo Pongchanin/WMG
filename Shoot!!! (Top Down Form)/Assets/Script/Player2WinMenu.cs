@@ -16,7 +16,7 @@ public class Player2WinMenu : MonoBehaviour {
     }
     public void ReturnToMenu()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(2);
     }
     public void QuitGame()
     {

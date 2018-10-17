@@ -70,5 +70,22 @@ public class Player2BallController : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "bullet3")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Player3")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "Player4")
+        {
+            Destroy(this.gameObject);
+        }
+        else if (collision.collider.tag == "bullet4")
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }

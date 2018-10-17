@@ -17,4 +17,8 @@ public class MainMenu : MonoBehaviour {
     {
         Application.LoadLevel(1);
     }
+    public void Stage2()
+    {
+        Application.LoadLevel(2);
+    }
 }

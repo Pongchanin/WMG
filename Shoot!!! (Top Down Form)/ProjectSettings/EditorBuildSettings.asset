@@ -12,9 +12,18 @@ EditorBuildSettings:
     path: Assets/Scene/main.unity
     guid: aaed07bb7abb0ff4293a9875e54dfd5f
   - enabled: 1
+    path: Assets/Scene/main_two.unity
+    guid: 85d6fe09378fd71438c2145bab1c85e4
+  - enabled: 1
     path: Assets/Scene/Player 1 Win.unity
     guid: ab76d95748730754f817a0fce9a74221
   - enabled: 1
     path: Assets/Scene/Player 2 Win.unity
     guid: e24ea1346111bd240b35d805360370b2
+  - enabled: 1
+    path: Assets/Scene/Player 3 Win.unity
+    guid: b379ba9a50071f44bb1901702ea15410
+  - enabled: 1
+    path: Assets/Scene/Player 4 Win.unity
+    guid: c085a76b957ffa74085741d2a734675d
   m_configObjects: {}
