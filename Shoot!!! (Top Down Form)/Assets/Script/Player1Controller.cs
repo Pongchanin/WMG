@@ -13,12 +13,17 @@ public class Player1Controller : MonoBehaviour
     public GameObject Shield;
     public Transform playerPoint;
 
+    public float boostDelayTime = 0.5f;
+    public float currentBoostDelayTime;
+    public bool boosting = false;
+    public float time;
+
 
     float timeRemaining = 3f;
 
     void Start()
     {
-
+        currentBoostDelayTime = 0f;
     }
     void Update()
     {
@@ -34,9 +39,15 @@ public class Player1Controller : MonoBehaviour
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if(isShield == false)
         {
-            Instantiate(Shield, playerPoint.position, playerPoint.rotation);
+            if (Input.GetKeyDown(KeyCode.E) && !boosting && Time.time > currentBoostDelayTime)
+            {
+                Instantiate(Shield, playerPoint.position, playerPoint.rotation);
+                isShield = true;
+                currentBoostDelayTime = Time.time + boostDelayTime;
+            }
+            isShield = false;
         }
     }
 

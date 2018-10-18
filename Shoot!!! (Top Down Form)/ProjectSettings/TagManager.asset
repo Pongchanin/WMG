@@ -17,6 +17,7 @@ TagManager:
   - bullet4
   - Turret
   - TurretBall
+  - GravityTrap
   layers:
   - Default
   - TransparentFX

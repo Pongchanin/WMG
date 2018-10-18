@@ -5,14 +5,20 @@ using UnityEngine;
 public class Player4Controller : MonoBehaviour {
 
     public float moveSpeed;
-    public Transform firePoint;
+    public Transform playerPoint;
+    public GameObject GravityTrap;
     public GameObject Ball;
+    public Transform firePoint;
     public bool PlayerFacingRight;
 
+    public float boostDelayTime = 0.5f;
+    public float currentBoostDelayTime;
+    public bool boosting = false;
+    public float time;
 
     void Start()
     {
-    
+        currentBoostDelayTime = 0f;
     }
 
 
@@ -30,6 +36,10 @@ public class Player4Controller : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.L) && !boosting && Time.time > currentBoostDelayTime)
+        {
+            Instantiate(GravityTrap, playerPoint.position, playerPoint.rotation);
         }
     }
 }

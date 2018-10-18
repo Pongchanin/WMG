@@ -179,13 +179,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1805f77725c32414892fd88df8ae48fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShield: 1
+  isShield: 0
   moveSpeed: 10
   firePoint: {fileID: 4870526139297650}
   Ball: {fileID: 1331630687571874, guid: 7aa6a16c3be20d646b7131375cde710a, type: 2}
   PlayerFacingRight: 1
   Shield: {fileID: 1917549653531390, guid: 3ab3c3689dafc854ba7d65266d03313a, type: 2}
   playerPoint: {fileID: 4441342330765706}
+  boostDelayTime: 6
+  currentBoostDelayTime: 6
+  boosting: 0
+  time: 0
 --- !u!212 &212395322619136806
 SpriteRenderer:
   m_ObjectHideFlags: 1

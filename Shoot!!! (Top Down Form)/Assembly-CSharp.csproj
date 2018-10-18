@@ -64,6 +64,7 @@
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scene.cs" />
     <Compile Include="Assets\Script\BallScore.cs" />
+    <Compile Include="Assets\Script\GravityTrapController.cs" />
     <Compile Include="Assets\Script\HuntPlayer1OnContact.cs" />
     <Compile Include="Assets\Script\HuntPlayer2OnContact.cs" />
     <Compile Include="Assets\Script\HuntPlayerOnContact.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Script\Plyaer1BallController.cs" />
     <Compile Include="Assets\Script\Script Prototype\BoostSpeed.cs" />
     <Compile Include="Assets\Script\Script Prototype\Boots.cs" />
-    <Compile Include="Assets\Script\Script Prototype\Shield.cs" />
     <Compile Include="Assets\Script\Script Prototype\ShieldController.cs" />
     <Compile Include="Assets\Script\Stage2BallScore.cs" />
     <Compile Include="Assets\Script\TurretBulletController.cs" />
