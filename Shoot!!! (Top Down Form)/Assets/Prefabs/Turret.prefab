@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  TurretBullet: {fileID: 1387722604315644, guid: e55634433584b804b915a6f4ba27556b,
+  TurretBullet: {fileID: 1387722604315644, guid: 3c10dc629aa99924eb8a24f1aa181172,
     type: 2}
   TurretFirePoint: {fileID: 4138530780963178}
   bulletShotDelay: 0.3

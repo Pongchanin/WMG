@@ -21,7 +21,10 @@ public class Player4Controller : MonoBehaviour {
         currentBoostDelayTime = 0f;
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
     void Update()
     {
 

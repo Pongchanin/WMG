@@ -52,6 +52,7 @@ GameObject:
   - component: {fileID: 212162621850984064}
   - component: {fileID: 60391067677493396}
   - component: {fileID: 114660619007116790}
+  - component: {fileID: 50320973317152188}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player4
@@ -100,6 +101,26 @@ Transform:
   m_Father: {fileID: 4061264575902148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50320973317152188
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1966035472803220}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!60 &60391067677493396
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -177,9 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   playerPoint: {fileID: 4605078551142046}
-  GravityTrap: {fileID: 1387722604315644, guid: e55634433584b804b915a6f4ba27556b,
+  GravityTrap: {fileID: 1654345775339030, guid: 365046bd33866094fa6b3abed119bf3c,
     type: 2}
-  Ball: {fileID: 1448523449326230, guid: 992be91d78f6e31449f4ddc8e8753ebc, type: 2}
+  Ball: {fileID: 1448523449326230, guid: 4ed108d962f1c264e8ba739d879662dc, type: 2}
   firePoint: {fileID: 4698294695344538}
   PlayerFacingRight: 1
   boostDelayTime: 0.5

@@ -22,7 +22,7 @@ public class SurprizeBox : MonoBehaviour {
            weaponRandomed = Random.Range(0, weapon.Length);
            weapon[weaponRandomed].SetActive(true);
            Invoke("delayBoxShot", shotDelay);
-           Destroy(surprizeBox);
+          // Destroy(surprizeBox);
         }
     }
 
@@ -46,6 +46,7 @@ public class SurprizeBox : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
         rigidbody2Ds[weaponRandomed].velocity = new Vector3(bulletSpeed, 0f, 0f);
 
     }
