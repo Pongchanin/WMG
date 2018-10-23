@@ -87,6 +87,10 @@ public class Player4BallController : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "SBox")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }

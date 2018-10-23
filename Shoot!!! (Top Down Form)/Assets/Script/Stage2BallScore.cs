@@ -29,6 +29,15 @@ public class Stage2BallScore : MonoBehaviour
     int ballSpeed;
     public int ballSpeedInit;
 
+    //Game UI Attribute
+    GameObject p1_score1;
+    GameObject p1_score2;
+    GameObject p1_score3;
+
+    GameObject p2_score1;
+    GameObject p2_score2;
+    GameObject p2_score3;
+
     void resetOnHit()
     {
         player3.SetActive(true);
@@ -68,17 +77,44 @@ public class Stage2BallScore : MonoBehaviour
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
     }
+    void ScoreUI_Updater()
+    {
+        if (p3_score == 1)
+        {
+            p1_score1.SetActive(true);
+        }
+        if (p3_score == 2)
+        {
+            p1_score2.SetActive(true);
+        }
+        if (p3_score == 3)
+        {
+            p1_score3.SetActive(true);
+        }
+        if (p4_score == 1)
+        {
+            p2_score3.SetActive(true);
+        }
+        if (p4_score == 2)
+        {
+            p2_score2.SetActive(true);
+        }
+        if (p4_score == 3)
+        {
+            p2_score1.SetActive(true);
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player3" && p4_score == 4)
+        if (col.gameObject.name == "Player3" && p4_score == 2)
         {
             p4_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
-            Application.LoadLevel(5);
+            Application.LoadLevel(6);
         }
-        else if (col.gameObject.name == "Player3" && p4_score < 4)
+        else if (col.gameObject.name == "Player3" && p4_score < 2)
         {
 
             player3.SetActive(false);
@@ -87,14 +123,14 @@ public class Stage2BallScore : MonoBehaviour
             resetOnHit();
             p4_score++;
         }
-        if (col.gameObject.name == "Player4" && p3_score == 4)
+        if (col.gameObject.name == "Player4" && p3_score == 2)
         {
             p3_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
-            Application.LoadLevel(6);
+            Application.LoadLevel(5);
         }
-        else if (col.gameObject.name == "Player4" && p3_score < 4)
+        else if (col.gameObject.name == "Player4" && p3_score < 2)
         {
 
             player3.SetActive(false);
@@ -119,12 +155,25 @@ public class Stage2BallScore : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        p1_score1 = GameObject.Find("p1_score1");
+        p1_score2 = GameObject.Find("p1_score2");
+        p1_score3 = GameObject.Find("p1_score3");
+        p2_score1 = GameObject.Find("p2_score1");
+        p2_score2 = GameObject.Find("p2_score2");
+        p2_score3 = GameObject.Find("p2_score3");
 
+        p1_score1.SetActive(false);
+        p1_score2.SetActive(false);
+        p1_score3.SetActive(false);
+        p2_score1.SetActive(false);
+        p2_score2.SetActive(false);
+        p2_score3.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        ScoreUI_Updater();
         player3_score.text = "Score: " + p3_score;
         player4_score.text = "Score: " + p4_score;
     }

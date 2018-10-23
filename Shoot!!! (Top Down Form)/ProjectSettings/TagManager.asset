@@ -18,6 +18,7 @@ TagManager:
   - Turret
   - TurretBall
   - GravityTrap
+  - SBox
   layers:
   - Default
   - TransparentFX

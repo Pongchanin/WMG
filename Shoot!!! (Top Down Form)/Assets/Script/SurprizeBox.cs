@@ -22,7 +22,7 @@ public class SurprizeBox : MonoBehaviour {
            weaponRandomed = Random.Range(0, weapon.Length);
            weapon[weaponRandomed].SetActive(true);
            Invoke("delayBoxShot", shotDelay);
-          // Destroy(surprizeBox);
+           Destroy(surprizeBox);
         }
     }
 
