@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981453954248034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.27, y: 1.14, z: 0.019413495}
+  m_LocalPosition: {x: -0.27, y: 1.56, z: 0.019413495}
   m_LocalScale: {x: 0.3427486, y: 0.3427486, z: 0.3427486}
   m_Children: []
   m_Father: {fileID: 4445541726984886}
@@ -203,7 +203,7 @@ MonoBehaviour:
   isShield: 0
   moveSpeed: 10
   firePoint: {fileID: 4870526139297650}
-  Ball: {fileID: 1331630687571874, guid: 7aa6a16c3be20d646b7131375cde710a, type: 2}
+  Ball: {fileID: 1480153806920388, guid: ac62fdc982a556941ba83d4c72e23b3b, type: 2}
   PlayerFacingRight: 1
   Shield: {fileID: 1917549653531390, guid: 3ab3c3689dafc854ba7d65266d03313a, type: 2}
   playerPoint: {fileID: 4441342330765706}
