@@ -15,6 +15,7 @@ public class Player2Controller : MonoBehaviour
     public float baseSpeed = 1.0f;
     public float speedBoost = 2.0f;
     public float speed;
+    public int rotateSpeed;
 
     public Transform firePoint;
     public GameObject Ball;
@@ -40,6 +41,10 @@ public class Player2Controller : MonoBehaviour
         if (Input.GetAxisRaw("Vertical2") > 0.5f || Input.GetAxisRaw("Vertical2") < -0.5f)
         {
             transform.Translate(new Vector3(0f, Input.GetAxisRaw("Vertical2") * speed * Time.deltaTime, 0f));
+        }
+        if (Input.GetAxisRaw("Rotate_P2") > 0.5f || Input.GetAxisRaw("Rotate_P2") < -0.5f)
+        {
+            transform.Rotate(new Vector3(0f, 0f, Input.GetAxisRaw("Rotate_P2") * rotateSpeed * speed * Time.deltaTime));
         }
         if (Input.GetKeyDown(KeyCode.Return))
         {

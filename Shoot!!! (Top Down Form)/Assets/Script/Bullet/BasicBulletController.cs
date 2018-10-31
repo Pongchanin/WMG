@@ -14,7 +14,7 @@ public class BasicBulletController : MonoBehaviour
 
     void setBallDirection()
     {
-            rigid2D.AddForce(player.gameObject.transform.up * speed);
+        rigid2D.AddForce(player.gameObject.transform.up * speed);
         print(player.gameObject.transform.forward);
     }
 
