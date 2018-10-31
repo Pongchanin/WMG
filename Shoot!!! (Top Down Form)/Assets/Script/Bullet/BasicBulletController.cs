@@ -14,14 +14,8 @@ public class BasicBulletController : MonoBehaviour
 
     void setBallDirection()
     {
-        if (player.PlayerFacingRight == true)
-        {
-            rigid2D.velocity = new Vector3(speed, 0, 0);
-        }
-        else
-        {
-            rigid2D.velocity = new Vector3(-speed, 0, 0);
-        }
+            rigid2D.AddForce(player.gameObject.transform.up * speed);
+        print(player.gameObject.transform.forward);
     }
 
     void Start ()
@@ -29,12 +23,13 @@ public class BasicBulletController : MonoBehaviour
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
         GameObject Player = GameObject.Find("Player1");
         player = Player.GetComponent<Player1Controller>();
+        setBallDirection();
     }
 	
 
 	void Update ()
     {
-        setBallDirection();
+       
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

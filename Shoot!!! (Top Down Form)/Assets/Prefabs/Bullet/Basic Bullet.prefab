@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 003354c157056d442bfea6d332e03505, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -89,14 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df234f62ae3aca4aae9b9644fc875fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 250
   player: {fileID: 0}
   jumpTime: 2
-  boostDelayTime: 0.5
-  currentBoostDelayTime: 0
-  boosting: 0
-  time: 0
-  isBasicBullet: 0
 --- !u!212 &212916597682859176
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1296,6 +1296,11 @@ Prefab:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 114508163175077092, guid: 08d7ffaba7aeab440bdb34ea4cbdb5c7,
+        type: 2}
+      propertyPath: rotateSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d7ffaba7aeab440bdb34ea4cbdb5c7, type: 2}
   m_IsPrefabAsset: 0
