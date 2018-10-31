@@ -97,6 +97,7 @@
     <None Include="Assets\Game UI Scene\Read_menuscreen_fromFon.txt" />
     <None Include="Assets\Game UI Scene\Read_fromFon_20180911_fonts.txt" />
     <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
       <HintPath>D:/OneDrive/Thammasat/IDD 2017 - Present/2018_Semester_1/IDD299 - Game Project II/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -107,6 +108,18 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/OneDrive/Thammasat/IDD 2017 - Present/2018_Semester_1/IDD299 - Game Project II/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
+      <HintPath>C:/Users/Pongc/Documents/GitHub/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>C:/Users/Pongc/Documents/GitHub/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>C:/Users/Pongc/Documents/GitHub/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>C:/Users/Pongc/Documents/GitHub/WMG/Shoot!!! (Top Down Form)/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> 6e02aaa55b2b3f9ba3f535e49e1c6f6381eb5425
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
