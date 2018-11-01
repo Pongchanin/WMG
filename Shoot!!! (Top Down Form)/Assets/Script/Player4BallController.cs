@@ -13,14 +13,8 @@ public class Player4BallController : MonoBehaviour {
 
     void setBallDirection()
     {
-        if (player.PlayerFacingRight == true)
-        {
-            rigid2D.velocity = new Vector3(-speed, 0, 0);
-        }
-        else
-        {
-            rigid2D.velocity = new Vector3(speed, 0, 0);
-        }
+        rigid2D.AddForce(player.gameObject.transform.up * -speed);
+        print(player.gameObject.transform.up);
     }
 
     void Start()
@@ -28,6 +22,7 @@ public class Player4BallController : MonoBehaviour {
         rigid2D = gameObject.GetComponent<Rigidbody2D>();
         GameObject Player = GameObject.Find("Player4");
         player = Player.GetComponent<Player4Controller>();
+        setBallDirection();
 
     }
 

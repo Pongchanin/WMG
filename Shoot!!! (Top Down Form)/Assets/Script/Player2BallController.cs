@@ -12,8 +12,8 @@ public class Player2BallController : MonoBehaviour {
 
     void setBallDirection()
     {
-        rigid2D.AddForce(player.gameObject.transform.forward * speed);
-        print(player.gameObject.transform.forward);
+        rigid2D.AddForce(player.gameObject.transform.up * -speed);
+        print(player.gameObject.transform.up);
     }
 
     void Start()
