@@ -12,7 +12,7 @@ public class cutScene_P1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKey(KeyCode.E))
+		if(Input.GetKey(KeyCode.F))
         {
             cutSceneP1.SetActive(true);
             Time.timeScale = 0;
