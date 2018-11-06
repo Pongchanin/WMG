@@ -19,6 +19,7 @@ public class Player1Controller : MonoBehaviour
     public bool boosting = false;
     public float time;
 
+    public Animator anim;
 
     float timeRemaining = 3f;
 

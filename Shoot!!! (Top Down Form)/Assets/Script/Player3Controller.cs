@@ -50,7 +50,7 @@ public class Player3Controller : MonoBehaviour
         }
         if (isShot == false)
         {
-            if (Input.GetKeyDown(KeyCode.E) && !boosting && Time.time > currentBoostDelayTime)
+            if (Input.GetKeyDown(KeyCode.F) && !boosting && Time.time > currentBoostDelayTime)
             {
                 Instantiate(turret, turretPoint.position, turretPoint.rotation);
                 currentBoostDelayTime = Time.time + boostDelayTime;

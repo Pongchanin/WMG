@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60721800266364762}
   - component: {fileID: 114790304731940164}
   - component: {fileID: 50113866036059270}
+  - component: {fileID: 95777753267980772}
   m_Layer: 0
   m_Name: Player3
   m_TagString: Player3
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813010645981468}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 0.756, z: 0}
+  m_LocalPosition: {x: 0, y: 0.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4908546737036532}
@@ -93,8 +94,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437181859419206}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -5.9644923, y: 0.47162616, z: 0}
-  m_LocalScale: {x: 1.8963, y: 1.8963, z: 1.8963}
+  m_LocalPosition: {x: -6.19, y: 0.47, z: 0}
+  m_LocalScale: {x: 1.144417, y: 1.144417, z: 1.144417}
   m_Children:
   - {fileID: 4059194292981682}
   - {fileID: 4646736114053800}
@@ -168,6 +169,24 @@ PolygonCollider2D:
       - {x: 0.16, y: -0.51}
       - {x: 0.31, y: -0.48999998}
       - {x: 0.44, y: -0.44}
+--- !u!95 &95777753267980772
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1437181859419206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a8bc4a16399b344c977970ea814e29b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114790304731940164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,8 +200,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isShot: 0
   moveSpeed: 10
+  rotateSpeed: 10
   firePoint: {fileID: 4059194292981682}
-  Ball: {fileID: 1363915620389390, guid: f76ce44457c501f489df4b20c251cebe, type: 2}
+  Ball: {fileID: 1363915620389390, guid: 459274d0848c2604bad71611e7c7df29, type: 2}
   PlayerFacingRight: 1
   turret: {fileID: 1702908187503240, guid: 141124efa8b805e48b91ebc3711b5b25, type: 2}
   turretPoint: {fileID: 4646736114053800}
