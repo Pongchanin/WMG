@@ -11,6 +11,7 @@ public class BallScore : MonoBehaviour
     GameObject player1;
     Transform playerSpawn1;
     Vector3 playerSpwn1Pos;
+    Quaternion playerSpwn1Rot;
     Text player1_score;
     int p1_score = 0;
 
@@ -18,6 +19,7 @@ public class BallScore : MonoBehaviour
     GameObject player2;
     Transform playerSpwn2;
     Vector3 playerSpwn2Pos;
+    Quaternion playerSpwn2Rot;
     Text player2_score;
     int p2_score = 0;
 
@@ -30,6 +32,10 @@ public class BallScore : MonoBehaviour
     public int ballSpeedInit;
     public Animator ballAnim;
 
+    //Bullet Attribute
+    GameObject[] bullet;
+    GameObject[] bullet2;
+
     //Game UI Attribute
     GameObject p1_score1;
     GameObject p1_score2;
@@ -41,15 +47,29 @@ public class BallScore : MonoBehaviour
 
     void resetOnHit()
     {
+        ballSpeed = ballSpeedInit;
+        bullet = GameObject.FindGameObjectsWithTag("Basic Bullet");
+        bullet2 = GameObject.FindGameObjectsWithTag("bullet2");
+
         player1.SetActive(true);
         player1.transform.position = playerSpwn1Pos;
+        player1.transform.rotation = playerSpwn1Rot;
         player2.SetActive(true);
         player2.transform.position = playerSpwn2Pos;
+        player2.transform.rotation = playerSpwn2Rot;
         ball.SetActive(true);
         ball.transform.position = ballSpwnPos;
         ballSpeed = ballSpeedInit;
         
+        for(int i =0; i < bullet.Length; i++)
+        {
+            Destroy(bullet[i]);
+        }
 
+        for(int i = 0; i < bullet2.Length;i++)
+        {
+            Destroy(bullet2[i]);
+        }
     }
     void increaseBallSpeed()
     {
@@ -91,12 +111,14 @@ public class BallScore : MonoBehaviour
         player1_score = GameObject.Find("player1_score").GetComponent<Text>();
         playerSpawn1 = GameObject.Find("player1_spawnpoint").transform;
         playerSpwn1Pos = new Vector3(playerSpawn1.position.x, playerSpawn1.position.y, playerSpawn1.position.z);
+        playerSpwn1Rot = GameObject.Find("Player1").transform.localRotation;
 
         //Get Player 2 Component
         player2 = GameObject.FindGameObjectWithTag("Player2");
         player2_score = GameObject.Find("player2_score").GetComponent<Text>();
         playerSpwn2 = GameObject.Find("player2_spawnpoint").transform;
         playerSpwn2Pos = new Vector3(playerSpwn2.position.x, playerSpwn2.position.y, playerSpwn2.position.z);
+        playerSpwn2Rot = GameObject.Find("Player2").transform.localRotation;
 
         //Get Ball Component
         ball = GameObject.FindGameObjectWithTag("ball");
@@ -144,19 +166,19 @@ public class BallScore : MonoBehaviour
         }
         if (col.gameObject.CompareTag("bullet"))
         {
-            ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+            //ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
         }
-        if (col.gameObject.CompareTag("bullet2"))
+        else if (col.gameObject.CompareTag("bullet2"))
         {
-            ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
+           // ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
             ballAnim.SetBool("Black", false);
             ballAnim.SetBool("Orange", true);
         }
         if (col.gameObject.CompareTag("Basic Bullet"))
         {
-            ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+           // ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
             ballAnim.SetBool("Black", true);
             ballAnim.SetBool("Orange", false);
@@ -180,6 +202,8 @@ public class BallScore : MonoBehaviour
         p2_score1.SetActive(false);
         p2_score2.SetActive(false);
         p2_score3.SetActive(false);
+
+        
     }
 
     // Update is called once per frame
