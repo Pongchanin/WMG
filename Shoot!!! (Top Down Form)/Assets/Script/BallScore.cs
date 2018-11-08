@@ -28,6 +28,7 @@ public class BallScore : MonoBehaviour
     Vector3 ballSpwnPos;
     int ballSpeed;
     public int ballSpeedInit;
+    public Animator ballAnim;
 
     //Game UI Attribute
     GameObject p1_score1;
@@ -104,6 +105,7 @@ public class BallScore : MonoBehaviour
 
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
+        ballAnim = ball.gameObject.GetComponent<Animator>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -149,6 +151,15 @@ public class BallScore : MonoBehaviour
         {
             ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            ballAnim.SetBool("Black", false);
+            ballAnim.SetBool("Orange", true);
+        }
+        if (col.gameObject.CompareTag("Basic Bullet"))
+        {
+            ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+            increaseBallSpeed();
+            ballAnim.SetBool("Black", true);
+            ballAnim.SetBool("Orange", false);
         }
 
     }
