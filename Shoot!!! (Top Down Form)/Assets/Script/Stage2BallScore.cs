@@ -11,6 +11,7 @@ public class Stage2BallScore : MonoBehaviour
     GameObject player3;
     Transform playerSpawn3;
     Vector3 playerSpwn3Pos;
+    Quaternion playerSpwn3Rot;
     Text player3_score;
     int p3_score = 0;
 
@@ -18,6 +19,7 @@ public class Stage2BallScore : MonoBehaviour
     GameObject player4;
     Transform playerSpwn4;
     Vector3 playerSpwn4Pos;
+    Quaternion playerSpwn4Rot;
     Text player4_score;
     int p4_score = 0;
 
@@ -28,6 +30,11 @@ public class Stage2BallScore : MonoBehaviour
     Vector3 ballSpwnPos;
     int ballSpeed;
     public int ballSpeedInit;
+    public Animator ballAnim;
+
+    //Bullet Attribute
+    GameObject[] bullet;
+    GameObject[] bullet2;
 
     //Game UI Attribute
     GameObject p1_score1;
@@ -40,15 +47,29 @@ public class Stage2BallScore : MonoBehaviour
 
     void resetOnHit()
     {
+        ballSpeed = ballSpeedInit;
+        bullet = GameObject.FindGameObjectsWithTag("bullet3");
+        bullet2 = GameObject.FindGameObjectsWithTag("bullet4");
+
         player3.SetActive(true);
         player3.transform.position = playerSpwn3Pos;
+        player3.transform.localRotation = playerSpwn3Rot;
         player4.SetActive(true);
         player4.transform.position = playerSpwn4Pos;
+        player4.transform.localRotation = playerSpwn4Rot;
         ball.SetActive(true);
         ball.transform.position = ballSpwnPos;
         ballSpeed = ballSpeedInit;
 
+        for (int i = 0; i < bullet.Length; i++)
+        {
+            Destroy(bullet[i]);
+        }
 
+        for (int i = 0; i < bullet2.Length; i++)
+        {
+            Destroy(bullet2[i]);
+        }
     }
     void increaseBallSpeed()
     {
@@ -62,17 +83,20 @@ public class Stage2BallScore : MonoBehaviour
         player3_score = GameObject.Find("player3_score").GetComponent<Text>();
         playerSpawn3 = GameObject.Find("player3_spawnpoint").transform;
         playerSpwn3Pos = new Vector3(playerSpawn3.position.x, playerSpawn3.position.y, playerSpawn3.position.z);
+        playerSpwn3Rot = GameObject.Find("Player3").transform.localRotation;
 
         //Get Player 4 Component
         player4 = GameObject.FindGameObjectWithTag("Player4");
         player4_score = GameObject.Find("player4_score").GetComponent<Text>();
         playerSpwn4 = GameObject.Find("player4_spawnpoint").transform;
         playerSpwn4Pos = new Vector3(playerSpwn4.position.x, playerSpwn4.position.y, playerSpwn4.position.z);
+        playerSpwn4Rot = GameObject.Find("Player4").transform.localRotation;
 
         //Get Ball Component
         ball = GameObject.FindGameObjectWithTag("ball");
         ballSpwn = GameObject.Find("Ball_spawnpoint").transform;
         ballSpwnPos = new Vector3(ballSpwn.position.x, ballSpwn.position.y, ballSpwn.position.z);
+        ballAnim = gameObject.GetComponent<Animator>();
 
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
@@ -141,13 +165,18 @@ public class Stage2BallScore : MonoBehaviour
         }
         if (col.gameObject.CompareTag("bullet3"))
         {
-            ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
+
+            //ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            ballAnim.SetBool("Green", true);
+            ballAnim.SetBool("Red", false);
         }
         if (col.gameObject.CompareTag("bullet4"))
         {
-            ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
+           // ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            ballAnim.SetBool("Red", true);
+            ballAnim.SetBool("Green", false);
         }
 
     }
@@ -168,6 +197,8 @@ public class Stage2BallScore : MonoBehaviour
         p2_score1.SetActive(false);
         p2_score2.SetActive(false);
         p2_score3.SetActive(false);
+
+        ballSpeed = ballSpeedInit;
     }
 
     // Update is called once per frame
