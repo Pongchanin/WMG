@@ -43,7 +43,7 @@ public class BasicBulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Basic Bullet"))
         {
-            jumpTime = 0;
+            Destroy(this.gameObject);
         }
         else if (collision.collider.tag == "Player1")
         {
@@ -78,6 +78,10 @@ public class BasicBulletController : MonoBehaviour
             Destroy(this.gameObject);
         }
         else if (collision.collider.tag == "Player2")
+        {
+            Destroy(this.gameObject);
+        }
+        else if(collision.collider.tag == "Wall")
         {
             Destroy(this.gameObject);
         }
