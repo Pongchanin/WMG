@@ -86,6 +86,10 @@ public class Player4BallController : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
+        else if (collision.collider.tag == "bullet4")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }
