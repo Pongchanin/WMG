@@ -32,7 +32,7 @@ TagManager:
   - Player1
   - Player2
   - Shield
-  - 
+  - Ball
   - 
   - 
   - 
@@ -59,4 +59,7 @@ TagManager:
     locked: 0
   - name: Shield
     uniqueID: 3895241743
+    locked: 0
+  - name: Ball
+    uniqueID: 2759880981
     locked: 0

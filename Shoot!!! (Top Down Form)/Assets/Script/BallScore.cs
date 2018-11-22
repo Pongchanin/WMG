@@ -31,6 +31,7 @@ public class BallScore : MonoBehaviour
     int ballSpeed;
     public int ballSpeedInit;
     public Animator ballAnim;
+    string ballColor;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -128,18 +129,19 @@ public class BallScore : MonoBehaviour
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
         ballAnim = ball.gameObject.GetComponent<Animator>();
+        ballColor = "White";
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player1" && p2_score == 2)
+        if (col.gameObject.name == "Player1" && p2_score == 2 && ballColor == "Orange")
         {
             p2_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(4);
         }
-        else if (col.gameObject.name == "Player1" && p2_score < 2)
+        else if (col.gameObject.name == "Player1" && p2_score < 2 && ballColor == "Orange")
         {
 
             player1.SetActive(false);
@@ -148,14 +150,14 @@ public class BallScore : MonoBehaviour
             resetOnHit();
             p2_score++;
         }
-        if (col.gameObject.name == "Player2" && p1_score == 2)
+        if (col.gameObject.name == "Player2" && p1_score == 2 && ballColor == "Black")
         {
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(3);
         }
-        else if (col.gameObject.name == "Player2" && p1_score < 2)
+        else if (col.gameObject.name == "Player2" && p1_score < 2 && ballColor == "Black")
         {
 
             player1.SetActive(false);
@@ -173,6 +175,7 @@ public class BallScore : MonoBehaviour
         {
            // ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            ballColor = "Orange";
             ballAnim.SetBool("Black", false);
             ballAnim.SetBool("Orange", true);
         }
@@ -180,6 +183,7 @@ public class BallScore : MonoBehaviour
         {
            // ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            ballColor = "Black";
             ballAnim.SetBool("Black", true);
             ballAnim.SetBool("Orange", false);
         }

@@ -31,6 +31,7 @@ public class Stage2BallScore : MonoBehaviour
     int ballSpeed;
     public int ballSpeedInit;
     public Animator ballAnim;
+    string ballColor;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -100,6 +101,7 @@ public class Stage2BallScore : MonoBehaviour
 
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
+        ballColor = "White";
     }
     void ScoreUI_Updater()
     {
@@ -131,14 +133,14 @@ public class Stage2BallScore : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Player3" && p4_score == 2)
+        if (col.gameObject.name == "Player3" && p4_score == 2 && ballColor == "Red")
         {
             p4_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(6);
         }
-        else if (col.gameObject.name == "Player3" && p4_score < 2)
+        else if (col.gameObject.name == "Player3" && p4_score < 2 && ballColor == "Red")
         {
 
             player3.SetActive(false);
@@ -147,14 +149,14 @@ public class Stage2BallScore : MonoBehaviour
             resetOnHit();
             p4_score++;
         }
-        if (col.gameObject.name == "Player4" && p3_score == 2)
+        if (col.gameObject.name == "Player4" && p3_score == 2 && ballColor=="Green")
         {
             p3_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
             Application.LoadLevel(5);
         }
-        else if (col.gameObject.name == "Player4" && p3_score < 2)
+        else if (col.gameObject.name == "Player4" && p3_score < 2 && ballColor == "Green")
         {
 
             player3.SetActive(false);
@@ -170,6 +172,7 @@ public class Stage2BallScore : MonoBehaviour
             increaseBallSpeed();
             ballAnim.SetBool("Green", true);
             ballAnim.SetBool("Red", false);
+            ballColor = "Green";
         }
         if (col.gameObject.CompareTag("bullet4"))
         {
@@ -177,6 +180,7 @@ public class Stage2BallScore : MonoBehaviour
             increaseBallSpeed();
             ballAnim.SetBool("Red", true);
             ballAnim.SetBool("Green", false);
+            ballColor = "Red";
         }
 
     }
