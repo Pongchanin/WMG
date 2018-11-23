@@ -16,6 +16,7 @@ public class Player2Controller : MonoBehaviour
     public float speedBoost = 2.0f;
     public float speed;
     public int rotateSpeed;
+    public Rigidbody2D rigid2d;
 
     public Transform firePoint;
     public GameObject Ball;
@@ -26,9 +27,20 @@ public class Player2Controller : MonoBehaviour
         currentBoostTime = 0f;
         currentBoostDelayTime = 0f;
         speed = baseSpeed;
+        rigid2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Basic Bullet")
+        {
+            rigid2d.velocity = new Vector2(0, 0);
+        }
+        if(collision.collider.tag == "ball")
+        {
+            rigid2d.velocity = new Vector2(0, 0);
+        }
+    }
     void Update()
     {
         time = Time.time;
@@ -61,6 +73,7 @@ public class Player2Controller : MonoBehaviour
         {
             boosting = false;
         }
+
     }
     void movePlayer()
     {

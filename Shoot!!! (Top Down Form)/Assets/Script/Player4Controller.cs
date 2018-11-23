@@ -11,6 +11,7 @@ public class Player4Controller : MonoBehaviour {
     public GameObject Ball;
     public Transform firePoint;
     public bool PlayerFacingRight;
+    public Rigidbody2D rigid2d;
 
     public float boostDelayTime = 0.5f;
     public float currentBoostDelayTime;
@@ -20,11 +21,25 @@ public class Player4Controller : MonoBehaviour {
     void Start()
     {
         currentBoostDelayTime = 0f;
+        rigid2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.collider.tag == "bullet3")
+        {
+            print("Collide");
+            rigid2d.velocity = new Vector2(moveSpeed, 0);
+            rigid2d.velocity = new Vector2(0, 0);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "bullet3")
+        {
+            print("Collide");
+            rigid2d.velocity = new Vector2(0, 0);
+        }
     }
     void Update()
     {

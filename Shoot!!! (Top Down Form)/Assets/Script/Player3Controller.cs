@@ -13,6 +13,7 @@ public class Player3Controller : MonoBehaviour
     public bool PlayerFacingRight;
     public GameObject turret;
     public Transform turretPoint;
+    public Rigidbody2D rigid2d;
 
     public float boostDelayTime = 0.5f;
     public float currentBoostDelayTime;
@@ -21,11 +22,17 @@ public class Player3Controller : MonoBehaviour
 
     void Start()
     {
+        rigid2d = gameObject.GetComponent<Rigidbody2D>();
         currentBoostDelayTime = 0f;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.collider.tag == "bullet4")
+        {
+            print("Collide");
+            rigid2d.velocity = new Vector2(moveSpeed, 0);
+            rigid2d.velocity = new Vector2(0, 0);
+        }
     }
 
 

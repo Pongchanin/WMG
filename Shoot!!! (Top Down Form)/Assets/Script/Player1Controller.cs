@@ -13,6 +13,7 @@ public class Player1Controller : MonoBehaviour
     public bool PlayerFacingRight;
     public GameObject Shield;
     public Transform playerPoint;
+    public Rigidbody2D rigid2d;
 
     public float boostDelayTime = 0.5f;
     public float currentBoostDelayTime;
@@ -25,8 +26,23 @@ public class Player1Controller : MonoBehaviour
 
     float timeRemaining = 3f;
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "bullet2")
+        {
+            //Rigid Set zero
+            rigid2d.velocity = new Vector2(0, 0);
+        }
+        if(collision.collider.tag == "ball")
+        {
+            rigid2d.velocity = new Vector2(0, 0);
+        }
+    }
+
     void Start()
     {
+        rigid2d = gameObject.GetComponent<Rigidbody2D>();
         currentBoostDelayTime = 0f;
       }
     void Update()
