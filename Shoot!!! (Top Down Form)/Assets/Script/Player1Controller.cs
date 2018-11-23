@@ -55,11 +55,15 @@ public class Player1Controller : MonoBehaviour
         {
             transform.Translate(Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime,0f , 0f,Space.World);
         }
-        if (Input.GetAxisRaw("Rotate_P1")>0.5f || Input.GetAxisRaw("Rotate_P1") < -0.5f)
+      /*  if (Input.GetAxisRaw("Rotate_P1")>0.5f || Input.GetAxisRaw("Rotate_P1") < -0.5f)
         {
             transform.Rotate(0f, 0f, Input.GetAxisRaw("Rotate_P1") * rotateSpeed * moveSpeed * Time.deltaTime,Space.Self);
+        }*/
+        if (Input.GetAxisRaw("Rotate_P1") > 0.5f || Input.GetAxisRaw("Rotate_P1")<-.5f)
+        {
+            transform.Rotate(0f, 0f, Input.GetAxisRaw("Rotate_P1") * rotateSpeed * moveSpeed * Time.deltaTime, Space.Self);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1"))//Input.GetAxisRaw("Fire1") > 0.5f)
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
         }

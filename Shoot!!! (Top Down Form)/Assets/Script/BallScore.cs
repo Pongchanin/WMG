@@ -32,6 +32,7 @@ public class BallScore : MonoBehaviour
     public int ballSpeedInit;
     public Animator ballAnim;
     string ballColor;
+    Rigidbody2D rigid2d;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -187,7 +188,22 @@ public class BallScore : MonoBehaviour
             ballAnim.SetBool("Black", true);
             ballAnim.SetBool("Orange", false);
         }
+        if(col.gameObject.CompareTag("Wall"))
+        {
+            print("collide");
+            print(rigid2d.velocity);
+            //rigid2d.velocity = new Vector2(rigid2d.velocity.x * -1,rigid2d.velocity.y * -1);
+        }
 
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            print("collide");
+            print(rigid2d.velocity);
+            rigid2d.AddForce(rigid2d.velocity * -1 * Time.deltaTime); 
+        }
     }
 
     // Use this for initialization
@@ -207,7 +223,7 @@ public class BallScore : MonoBehaviour
         p2_score2.SetActive(false);
         p2_score3.SetActive(false);
 
-        
+        rigid2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame

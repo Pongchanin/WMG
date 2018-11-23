@@ -303,7 +303,7 @@ Prefab:
         type: 2}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 003354c157056d442bfea6d332e03505, type: 2}
+      objectReference: {fileID: 6200000, guid: 8d16d45d2618d35488bcbeec64c8abb3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a462fcd7a449d4147959823bd2b16654, type: 2}
   m_IsPrefabAsset: 0
@@ -1074,6 +1074,11 @@ Prefab:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 50320973317152188, guid: 075151679c92808488c1c505a0e0879d,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 8d16d45d2618d35488bcbeec64c8abb3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 075151679c92808488c1c505a0e0879d, type: 2}
   m_IsPrefabAsset: 0

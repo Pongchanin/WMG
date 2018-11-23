@@ -32,6 +32,10 @@ public class Player4Controller : MonoBehaviour {
             rigid2d.velocity = new Vector2(moveSpeed, 0);
             rigid2d.velocity = new Vector2(0, 0);
         }
+        if (collision.collider.tag == "ball")
+        {
+            rigid2d.velocity = new Vector2(0, 0);
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -52,11 +56,11 @@ public class Player4Controller : MonoBehaviour {
         {
             transform.Translate(Input.GetAxisRaw("Vertical2") * moveSpeed * Time.deltaTime, 0f, 0f, Space.World);
         }
-        if (Input.GetAxisRaw("Rotate_P2") > 0.5f || Input.GetAxisRaw("Rotate_P2") < -0.5f)
+        if (Input.GetAxisRaw("Rotate_P2") > 0.5f || Input.GetAxisRaw("Rotate_P2") < -0.5f || Input.GetButton("Rotate_P2"))
         {
             transform.Rotate(0f, 0f, Input.GetAxisRaw("Rotate_P2") * rotateSpeed * moveSpeed * Time.deltaTime, Space.Self);
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire2"))
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
         }

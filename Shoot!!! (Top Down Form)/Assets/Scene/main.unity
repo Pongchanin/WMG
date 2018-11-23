@@ -818,7 +818,7 @@ GameObject:
   - component: {fileID: 308293105}
   m_Layer: 0
   m_Name: Stage1_BG_Front_Edited
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -893,7 +893,7 @@ PolygonCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308293102}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 003354c157056d442bfea6d332e03505, type: 2}
   m_IsTrigger: 0

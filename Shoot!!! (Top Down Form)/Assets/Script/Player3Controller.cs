@@ -33,6 +33,10 @@ public class Player3Controller : MonoBehaviour
             rigid2d.velocity = new Vector2(moveSpeed, 0);
             rigid2d.velocity = new Vector2(0, 0);
         }
+        if (collision.collider.tag == "ball")
+        {
+            rigid2d.velocity = new Vector2(0, 0);
+        }
     }
 
 
@@ -51,7 +55,7 @@ public class Player3Controller : MonoBehaviour
         {
             transform.Rotate(0f, 0f, Input.GetAxisRaw("Rotate_P1") * rotateSpeed * moveSpeed * Time.deltaTime, Space.Self);
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1"))
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
         }
