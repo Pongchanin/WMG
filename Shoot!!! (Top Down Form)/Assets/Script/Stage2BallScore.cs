@@ -32,6 +32,7 @@ public class Stage2BallScore : MonoBehaviour
     public int ballSpeedInit;
     public Animator ballAnim;
     string ballColor;
+    Text ballSpeedTxt;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -74,7 +75,20 @@ public class Stage2BallScore : MonoBehaviour
     }
     void increaseBallSpeed()
     {
-        ballSpeed += 1;
+        ballRigid2D.velocity += new Vector2(1, 0);
+    }
+    int BallSpeedCheck()
+    {
+        int ballSpeedvar = 0;
+        ballSpeedvar = (int)Mathf.Sqrt(Mathf.Pow(ballRigid2D.velocity.x, 2) + Mathf.Pow(ballRigid2D.velocity.y, 2));
+        print(ballSpeedvar);
+        return ballSpeedvar;
+        
+    }
+
+    void UpdateBall()
+    {
+        ballRigid2D.velocity = 
     }
 
     private void Awake()
@@ -102,6 +116,7 @@ public class Stage2BallScore : MonoBehaviour
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
         ballColor = "White";
+        ballSpeedTxt = GameObject.Find("ballSpeedTxt").GetComponent<Text>();
     }
     void ScoreUI_Updater()
     {
@@ -216,5 +231,9 @@ public class Stage2BallScore : MonoBehaviour
         ScoreUI_Updater();
         player3_score.text = "Score: " + p3_score;
         player4_score.text = "Score: " + p4_score;
+        ballSpeedTxt.text = BallSpeedCheck().ToString();     //ballRigid2D.velocity.x.ToString();
+
+
+
     }
 }
