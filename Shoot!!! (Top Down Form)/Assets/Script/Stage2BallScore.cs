@@ -182,6 +182,11 @@ public class Stage2BallScore : MonoBehaviour
             ballAnim.SetBool("Green", false);
             ballColor = "Red";
         }
+        if (col.gameObject.CompareTag("Wall"))
+        {
+            increaseBallSpeed();
+          //  transform.InverseTransformVector(ballRigid2D.velocity);
+        }
 
     }
 
