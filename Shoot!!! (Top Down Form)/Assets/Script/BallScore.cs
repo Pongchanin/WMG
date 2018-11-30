@@ -33,6 +33,7 @@ public class BallScore : MonoBehaviour
     public Animator ballAnim;
     string ballColor;
     Rigidbody2D rigid2d;
+    Text ballSpeedTxt;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -73,9 +74,22 @@ public class BallScore : MonoBehaviour
             Destroy(bullet2[i]);
         }
     }
+    int BallSpeedCheck()
+    {
+        int ballSpeedvar = 0;
+        ballSpeedvar = (int)Mathf.Sqrt(Mathf.Pow(ballRigid2D.velocity.x, 2) + Mathf.Pow(ballRigid2D.velocity.y, 2));
+        print(ballSpeedvar);
+        return ballSpeedvar;
+
+    }
+
+    void UpdateBall()
+    {
+        ballRigid2D.velocity = ballRigid2D.velocity;
+    }
     void increaseBallSpeed()
     {
-        ballSpeed += 1;
+        ballRigid2D.velocity += ballRigid2D.velocity.normalized;
     }
 
     void ScoreUI_Updater()
@@ -131,6 +145,7 @@ public class BallScore : MonoBehaviour
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
         ballAnim = ball.gameObject.GetComponent<Animator>();
         ballColor = "White";
+        ballSpeedTxt = GameObject.Find("ballSpeedTxt").GetComponent<Text>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -144,7 +159,7 @@ public class BallScore : MonoBehaviour
         }
         else if (col.gameObject.name == "Player1" && p2_score < 2 && ballColor == "Orange")
         {
-
+            UpdateBall();
             player1.SetActive(false);
             player2.SetActive(false);
             ball.SetActive(false);
@@ -153,6 +168,7 @@ public class BallScore : MonoBehaviour
         }
         if (col.gameObject.name == "Player2" && p1_score == 2 && ballColor == "Black")
         {
+            UpdateBall();
             p1_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
@@ -176,6 +192,7 @@ public class BallScore : MonoBehaviour
         {
            // ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            UpdateBall();
             ballColor = "Orange";
             ballAnim.SetBool("Black", false);
             ballAnim.SetBool("Orange", true);
@@ -184,6 +201,7 @@ public class BallScore : MonoBehaviour
         {
            // ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            UpdateBall();
             ballColor = "Black";
             ballAnim.SetBool("Black", true);
             ballAnim.SetBool("Orange", false);
@@ -202,7 +220,7 @@ public class BallScore : MonoBehaviour
         {
             print("collide");
             print(rigid2d.velocity);
-            rigid2d.AddForce(rigid2d.velocity * -1 * Time.deltaTime); 
+           // rigid2d.AddForce(rigid2d.velocity * -1 * Time.deltaTime); 
         }
     }
 
@@ -232,6 +250,8 @@ public class BallScore : MonoBehaviour
         ScoreUI_Updater();
         player1_score.text = "Score: " + p1_score;
         player2_score.text = "Score: " + p2_score;
+        ballSpeedTxt.text = BallSpeedCheck().ToString();
+        UpdateBall();
     }
 }
     

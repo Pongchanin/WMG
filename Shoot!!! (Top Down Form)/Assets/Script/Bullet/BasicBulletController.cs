@@ -14,8 +14,11 @@ public class BasicBulletController : MonoBehaviour
 
     void setBallDirection()
     {
-        rigid2D.AddForce(player.gameObject.transform.up * speed);
-        print(player.gameObject.transform.up);
+        if (Mathf.Sqrt(Mathf.Pow(rigid2D.velocity.x, 2) + Mathf.Pow(rigid2D.velocity.y, 2)) < 5)
+        {
+            rigid2D.AddForce(player.gameObject.transform.up * speed);
+            print(player.gameObject.transform.up);
+        }
     }
 
     void Start ()
@@ -29,7 +32,7 @@ public class BasicBulletController : MonoBehaviour
 
 	void Update ()
     {
-       
+        setBallDirection();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

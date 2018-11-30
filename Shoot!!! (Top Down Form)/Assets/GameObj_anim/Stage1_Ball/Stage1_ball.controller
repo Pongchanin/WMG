@@ -43,6 +43,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Black
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: Orange
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102299749787632326}
   m_Solo: 0
@@ -53,7 +56,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.0000000015102528
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -134,7 +137,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 0.0000000019057702
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -144,7 +147,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: black
+  m_Name: Black
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
