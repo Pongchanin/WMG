@@ -58,7 +58,7 @@ public class Player2Controller : MonoBehaviour
         {
             transform.Rotate(0f, 0f, Input.GetAxisRaw("Rotate_P2") * rotateSpeed * speed * Time.deltaTime, Space.Self);
         }
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetButtonDown("Fire2"))
         {
             Instantiate(Ball, firePoint.position, firePoint.rotation);
         }
