@@ -58,16 +58,16 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: joystick button 2
     altNegativeButton: 
-    altPositiveButton: joystick button 2
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 3
     joyNum: 2
   - serializedVersion: 3
     m_Name: Fire3
@@ -261,3 +261,19 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 2
+  - serializedVersion: 3
+    m_Name: Pause Menu
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: joystick button 7
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1

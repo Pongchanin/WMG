@@ -32,6 +32,7 @@ public class Stage2BallScore : MonoBehaviour
     public int ballSpeedInit;
     public Animator ballAnim;
     string ballColor;
+    Text ballSpeedTxt;
 
     //Bullet Attribute
     GameObject[] bullet;
@@ -74,7 +75,20 @@ public class Stage2BallScore : MonoBehaviour
     }
     void increaseBallSpeed()
     {
-        ballSpeed += 1;
+        ballRigid2D.velocity += ballRigid2D.velocity.normalized;
+    }
+    int BallSpeedCheck()
+    {
+        int ballSpeedvar = 0;
+        ballSpeedvar = (int)Mathf.Sqrt(Mathf.Pow(ballRigid2D.velocity.x, 2) + Mathf.Pow(ballRigid2D.velocity.y, 2));
+        print(ballSpeedvar);
+        return ballSpeedvar;
+        
+    }
+
+    void UpdateBall()
+    {
+        ballRigid2D.velocity = ballRigid2D.velocity;
     }
 
     private void Awake()
@@ -85,13 +99,14 @@ public class Stage2BallScore : MonoBehaviour
         playerSpawn3 = GameObject.Find("player3_spawnpoint").transform;
         playerSpwn3Pos = new Vector3(playerSpawn3.position.x, playerSpawn3.position.y, playerSpawn3.position.z);
         playerSpwn3Rot = GameObject.Find("Player3").transform.localRotation;
-
+        player3_score.gameObject.SetActive(false);
         //Get Player 4 Component
         player4 = GameObject.FindGameObjectWithTag("Player4");
         player4_score = GameObject.Find("player4_score").GetComponent<Text>();
         playerSpwn4 = GameObject.Find("player4_spawnpoint").transform;
         playerSpwn4Pos = new Vector3(playerSpwn4.position.x, playerSpwn4.position.y, playerSpwn4.position.z);
         playerSpwn4Rot = GameObject.Find("Player4").transform.localRotation;
+        player4_score.gameObject.SetActive(false);
 
         //Get Ball Component
         ball = GameObject.FindGameObjectWithTag("ball");
@@ -102,6 +117,7 @@ public class Stage2BallScore : MonoBehaviour
         //Big Ball Component
         ballRigid2D = ball.gameObject.GetComponent<Rigidbody2D>();
         ballColor = "White";
+        ballSpeedTxt = GameObject.Find("ballSpeedTxt").GetComponent<Text>();
     }
     void ScoreUI_Updater()
     {
@@ -142,7 +158,7 @@ public class Stage2BallScore : MonoBehaviour
         }
         else if (col.gameObject.name == "Player3" && p4_score < 2 && ballColor == "Red")
         {
-
+            UpdateBall();
             player3.SetActive(false);
             player4.SetActive(false);
             ball.SetActive(false);
@@ -151,6 +167,7 @@ public class Stage2BallScore : MonoBehaviour
         }
         if (col.gameObject.name == "Player4" && p3_score == 2 && ballColor=="Green")
         {
+            UpdateBall();
             p3_score++;
             Destroy(col.gameObject);
             Time.timeScale = 0;
@@ -170,6 +187,7 @@ public class Stage2BallScore : MonoBehaviour
 
             //ballRigid2D.velocity = new Vector3(ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            UpdateBall();
             ballAnim.SetBool("Green", true);
             ballAnim.SetBool("Red", false);
             ballColor = "Green";
@@ -178,9 +196,15 @@ public class Stage2BallScore : MonoBehaviour
         {
            // ballRigid2D.velocity = new Vector3(-ballSpeed, 0.0f, 0.0f);
             increaseBallSpeed();
+            UpdateBall();
             ballAnim.SetBool("Red", true);
             ballAnim.SetBool("Green", false);
             ballColor = "Red";
+        }
+        if (col.gameObject.CompareTag("Wall"))
+        {
+            //increaseBallSpeed();
+          //  transform.InverseTransformVector(ballRigid2D.velocity);
         }
 
     }
@@ -211,5 +235,9 @@ public class Stage2BallScore : MonoBehaviour
         ScoreUI_Updater();
         player3_score.text = "Score: " + p3_score;
         player4_score.text = "Score: " + p4_score;
+        ballSpeedTxt.text = BallSpeedCheck().ToString();     //ballRigid2D.velocity.x.ToString();
+        UpdateBall();
+
+
     }
 }
