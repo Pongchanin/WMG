@@ -48,6 +48,9 @@ public class BallScore : MonoBehaviour
     GameObject p2_score2;
     GameObject p2_score3;
 
+    //Collide Detection
+    bool wallContract = false;
+
     void resetOnHit()
     {
         ballSpeed = ballSpeedInit;
@@ -206,10 +209,16 @@ public class BallScore : MonoBehaviour
             ballAnim.SetBool("Black", true);
             ballAnim.SetBool("Orange", false);
         }
-        if(col.gameObject.CompareTag("Wall"))
+        if(col.gameObject.CompareTag("Wall" ) && wallContract == false)
         {
+            
             print("collide");
             print(rigid2d.velocity);
+            UpdateBall();
+            InverseVelocity(col.contacts[0].normal);
+            wallContract = true;
+
+            Invoke("SetContractFalse", 0.1f);
             //rigid2d.velocity = new Vector2(rigid2d.velocity.x * -1,rigid2d.velocity.y * -1);
         }
 
@@ -220,7 +229,10 @@ public class BallScore : MonoBehaviour
         {
             print("collide");
             print(rigid2d.velocity);
-           // rigid2d.AddForce(rigid2d.velocity * -1 * Time.deltaTime); 
+            UpdateBall();
+
+            // InverseVelocity();
+            // rigid2d.AddForce(rigid2d.velocity * -1 * Time.deltaTime); 
         }
     }
 
@@ -252,6 +264,19 @@ public class BallScore : MonoBehaviour
         player2_score.text = "Score: " + p2_score;
         ballSpeedTxt.text = BallSpeedCheck().ToString();
         UpdateBall();
+    }
+
+    void InverseVelocity(Vector2 collide)
+    {
+        float speed = ballRigid2D.velocity.magnitude;
+        Vector2 direction = Vector2.Reflect(ballRigid2D.velocity.normalized,collide);
+        print("Rigid: " + ballRigid2D.velocity.normalized);
+        print("Direction: " + direction);
+        ballRigid2D.velocity = direction * speed;
+    }
+    void SetContractFalse()
+    {
+        wallContract = false;
     }
 }
     
